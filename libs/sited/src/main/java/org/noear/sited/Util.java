@@ -1,9 +1,18 @@
 package org.noear.sited;
 
 import android.content.Context;
+import android.net.Uri;
 import android.os.Handler;
+import android.os.Looper;
+import android.text.TextUtils;
 import android.util.Log;
+import android.util.StringBuilderPrinter;
 
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.MySSLSocketFactory;
+import com.loopj.android.http.RequestParams;
+import com.loopj.android.http.SyncHttpClient;
+import com.loopj.android.http.TextHttpResponseHandler;
 
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -17,28 +26,30 @@ import java.util.Map;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-import okhttp.OkCallback;
-import okhttp.OkHttpProxy;
-import okhttp.OkTextParser;
+import cz.msebera.android.httpclient.Header;
+import cz.msebera.android.httpclient.HttpResponse;
+import cz.msebera.android.httpclient.impl.client.DefaultRedirectHandler;
+import cz.msebera.android.httpclient.protocol.HttpContext;
 
 
 /**
- * Created by yuety on 15/8/21. Y
+ * Created by yuety on 15/8/21.
  */
 class Util {
-    static final String NEXT_CALL = "CALL::";
-    static final String defUA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240";
 
-    private static __ICache cache = null;
 
-    static void tryInitCache(Context context) {
+    protected static final String NEXT_CALL = "CALL::";
+    protected static final String defUA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240";
+
+    protected static __ICache cache = null;
+
+    protected static void tryInitCache(Context context) {
         if (cache == null) {
             cache = new __FileCache(context, "sited");
         }
     }
 
-
-    static Element getElement(Element n, String tag) {
+    protected static Element getElement(Element n, String tag) {
         NodeList temp = n.getElementsByTagName(tag);
         if (temp.getLength() > 0)
             return (Element) (temp.item(0));
@@ -46,7 +57,7 @@ class Util {
             return null;
     }
 
-    static Element getXmlroot(String xml) throws Exception {
+    protected static Element getXmlroot(String xml) throws Exception {
         StringReader sr = new StringReader(xml);
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dombuild = factory.newDocumentBuilder();
@@ -58,7 +69,7 @@ class Util {
     //----------------------------
     //
 
-    static String urlEncode(String str, SdNode config) {
+    protected static String urlEncode(String str, SdNode config) {
         try {
             return URLEncoder.encode(str, config.encode());
         } catch (Exception ex) {
@@ -66,11 +77,11 @@ class Util {
         }
     }
 
-    protected static void http(final SdSource source, boolean isUpdate, final HttpMessage msg) {
+    protected synchronized static void http(SdSource source, boolean isUpdate, HttpMessage msg) {
 
-        log(source, "Util.http", msg.url);
+        SdApi.log(source, "Util.http", msg.url);
 
-        String cacheKey2;
+        String cacheKey2 = null;
         String args = "";
         if (msg.form == null)
             cacheKey2 = msg.url;
@@ -83,112 +94,115 @@ class Util {
             cacheKey2 = sb.toString();
             args = cacheKey2;
         }
-        final String cacheKey = cacheKey2;
 
+        final String cacheKey = cacheKey2;
 
         __CacheBlock block = cache.get(cacheKey);
 
-        if (!isUpdate && msg.config.cache > 0) {
-            if (block != null && !block.isOuttime(msg.config)) {
+        if (isUpdate == false && msg.config.cache > 0) {
+            if (block != null && block.isOuttime(msg.config) == false) {
                 final __CacheBlock block1 = block;
 
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        log(source, "Util.incache.url", msg.url);
-                        msg.callback.run(1, msg, block1.value, null);
-                    }
+                new Handler().postDelayed(() -> {
+                    SdApi.log(source, "Util.incache.url", msg.url);
+                    msg.callback.run(1, msg, block1.value, null);
                 }, 100);
                 return;
             }
         }
 
-        doHttp(source, msg, block, new HttpCallback() {
-            @Override
-            public void run(Integer code, HttpMessage msg2, String data, String url302) {
-                if (code == 1) {
-                    cache.save(cacheKey, data);
-                }
-
-                msg.callback.run(code, msg2, data, url302);
+        doHttp(source, msg, block, (code, msg2, data, url302) -> {
+            if (code == 1) {
+                cache.save(cacheKey, data);
             }
+
+            msg.callback.run(code, msg2, data, url302);
+
         });
 
         source.DoTraceUrl(msg.url, args, msg.config);
     }
 
-    private static void doHttp(final SdSource source, final HttpMessage msg, final __CacheBlock cache, final HttpCallback callback) {
-        final __AsyncTag httpTag = new __AsyncTag();
 
-        OkCallback callback1 = new OkCallback<String>(new OkTextParser(msg.encode)) {
-            @Override
-            public void onSuccess(String cookie, String s) {
-                source.setCookies(cookie);
-                callback.run(1, msg, s, httpTag.str0);
-            }
+    private synchronized static void doHttp(SdSource source, HttpMessage msg, __CacheBlock cache, HttpCallback callback) {
+        AsyncHttpClient client = new AsyncHttpClient(true, 80, 443);
+        // for debug
+        client.setSSLSocketFactory(MySSLSocketFactory.getFixedSocketFactory());
+        client.setProxy("192.168.1.68", 8082);
+        client.setTimeout(Integer.MAX_VALUE);
+        client.setUserAgent(msg.ua);
+        client.setURLEncodingEnabled(msg.url.indexOf(" ") > 0);
+
+        for (String key : msg.header.keySet()) {
+            client.addHeader(key, msg.header.get(key));
+        }
+
+        __AsyncTag httpTag = new __AsyncTag();
+
+        TextHttpResponseHandler responseHandler = new TextHttpResponseHandler(msg.encode) {
 
             @Override
-            public void onFailure(Throwable e) {
-                Util.log(source,"http.onFailure", e.getMessage(), e);
+            public void onFailure(int statusCode, cz.msebera.android.httpclient.Header[] headers, String s, Throwable throwable) {
+
+                SdApi.log(source, "http.onFailure", throwable);
 
                 if (cache == null || cache.value == null)
                     callback.run(-2, msg, null, null);
                 else
                     callback.run(1, msg, cache.value, httpTag.str0);
             }
+
+            @Override
+            public void onSuccess(int statusCode, cz.msebera.android.httpclient.Header[] headers, String s) {
+                for (Header h1 : headers) {
+                    if ("Set-Cookie".equals(h1.getName())) {
+                        source.setCookies(h1.getValue());
+                    }
+                }
+                callback.run(1, msg, s, httpTag.str0);
+            }
         };
 
-//        client.setEnableRedirects(true);
-//        client.setRedirectHandler(new DefaultRedirectHandler(){
-//            @Override
-//            public boolean isRedirectRequested(HttpResponse response, HttpContext context) {
-//                int statusCode = response.getStatusLine().getStatusCode();
-//
-//                if (statusCode == 302 || statusCode == 301) {
-//                    httpTag.str0 = response.getFirstHeader("Location").getValue();
-//
-//                    if (!httpTag.str0.startsWith("http")) {
-//                        Uri uri = Uri.parse(msg.url);
-//                        httpTag.str0 = uri.getScheme() + "://" + uri.getHost() + httpTag.str0;
-//                    }
-//
-//                    Log.v("orgurl", msg.url);
-//                    Log.v("302url", httpTag.str0);
-//                }
-//
-//                return super.isRedirectRequested(response, context);
-//            }
-//        });
+
+        client.setEnableRedirects(true);
+        client.setRedirectHandler(new DefaultRedirectHandler() {
+            @Override
+            public boolean isRedirectRequested(HttpResponse response, HttpContext context) {
+                int statusCode = response.getStatusLine().getStatusCode();
+
+                if (statusCode == 302 || statusCode == 301) {
+                    httpTag.str0 = response.getFirstHeader("Location").getValue();
+
+                    if (httpTag.str0.startsWith("http") == false) {
+                        Uri uri = Uri.parse(msg.url);
+                        httpTag.str0 = uri.getScheme() + "://" + uri.getHost() + httpTag.str0;
+                    }
+
+                    Log.v("orgurl", msg.url);
+                    Log.v("302url", httpTag.str0);
+                }
+
+                return super.isRedirectRequested(response, context);
+            }
+        });
 
 
         try {
             int idx = msg.url.indexOf('#'); //去除hash，即#.*
-            String url2;
+            String url2 = null;
             if (idx > 0)
                 url2 = msg.url.substring(0, idx);
             else
                 url2 = msg.url;
 
             if ("post".equals(msg.method)) {
-                OkHttpProxy.post()
-                        .url(url2)
-                        .setParams(msg.form)
-                        .enqueue(callback1);
-            } else {
-                OkHttpProxy.get()
-                        .url(url2)
-                        .setHeaders(msg.header)
-                        .enqueue(callback1);
-            }
+                RequestParams postData = new RequestParams(msg.form);
+                postData.setContentEncoding(msg.encode);
 
-//            if ("post".equals(msg.method)) {
-//                RequestParams postData = new RequestParams(msg.form);
-//                postData.setContentEncoding(msg.encode);
-//
-//                client.post(url2, postData, responseHandler);
-//            } else {
-//                client.get(url2, responseHandler);
-//            }
+                client.post(url2, postData, responseHandler);
+            } else {
+                client.get(url2, responseHandler);
+            }
         } catch (Exception ex) {
             if (cache == null)
                 callback.run(-2, msg, null, null);
@@ -229,72 +243,14 @@ class Util {
         return s;
     }
 
-    //
-    //--------------------------------
-    //
-
-    public static void log(SdSource source, SdNode node, String url, String json, int tag) {
-        log(source, node.name, "tag=" + tag);
-
-        if (url == null)
-            log(source, node.name, "url=null");
-        else
-            log(source, node.name, url);
-
-        if (json == null)
-            log(source, node.name, "json=null");
-        else
-            log(source, node.name, json);
-    }
-
-    public static void log(SdSource source, String tag, String msg) {
-        Log.v(tag, msg);
-
-        if (SdApi._listener != null) {
-            SdApi._listener.log(source, tag, msg, null);
-        }
-    }
-
-    public static void log(SdSource source, String tag, String msg, Throwable tr) {
-        Log.v(tag, msg, tr);
-
-        if (SdApi._listener != null) {
-            SdApi._listener.log(source, tag, msg, tr);
-        }
-    }
-
-    public static void set(SdSource source, String key, String val) {
-        Log.v("SiteD.set:", key + "=" + val);
-
-        if (SdApi._listener != null) {
-            SdApi._listener.set(source,key, val);
-        }
-    }
-
-    public static String get(SdSource source, String key) {
-        if (SdApi._listener != null) {
-            String temp = SdApi._listener.get(source,key);
-
-            Log.v("SiteD.get:", key + "=" + temp);
-
-            return temp;
-        }
-
-        return "";
-    }
-
     //-------------
     //
-    static SdNode createNode(SdSource source) {return SdApi._factory.createNode(source);}
 
-    static SdNodeSet createNodeSet(SdSource source) {
-        return SdApi._factory.createNodeSet(source);
-    }
 
-    static String toJson(Map<String,String> data){
-        StringBuilder sb  = new StringBuilder();
+    public static String toJson(Map<String, String> data) {
+        StringBuilder sb = new StringBuilder();
 
-        if(data!=null) {
+        if (data != null) {
             sb.append("{");
 
             for (String k : data.keySet()) {
@@ -313,7 +269,8 @@ class Util {
         return sb.toString();
     }
 
-    private static void _WriteValue(StringBuilder _Writer, String val) {
+    private static final void _WriteValue(StringBuilder _Writer, String val) {
+
         if (val == null) {
             _Writer.append("null");
         } else {
@@ -324,14 +281,37 @@ class Util {
             for (int i = 0; i < n; i++) {
                 c = val.charAt(i);
                 switch (c) {
-                    case '\\':_Writer.append("\\\\");break;//20110809
-                    case '\"':_Writer.append("\\\"");break;
-                    case '\n':_Writer.append("\\n");break;
-                    case '\r':_Writer.append("\\r");break;
-                    case '\t':_Writer.append("\\t");break;
-                    case '\f':_Writer.append("\\f");break;
-                    case '\b':_Writer.append("\\b");break;
-                    default:_Writer.append(c);break;
+                    case '\\':
+                        _Writer.append("\\\\"); //20110809
+                        break;
+
+                    case '\"':
+                        _Writer.append("\\\"");
+                        break;
+
+                    case '\n':
+                        _Writer.append("\\n");
+                        break;
+
+                    case '\r':
+                        _Writer.append("\\r");
+                        break;
+
+                    case '\t':
+                        _Writer.append("\\t");
+                        break;
+
+                    case '\f':
+                        _Writer.append("\\f");
+                        break;
+
+                    case '\b':
+                        _Writer.append("\\b");
+                        break;
+
+                    default:
+                        _Writer.append(c);
+                        break;
                 }
             }
 

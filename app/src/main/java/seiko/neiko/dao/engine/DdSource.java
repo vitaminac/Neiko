@@ -1,4 +1,4 @@
-package  seiko.neiko.dao.engine;
+package seiko.neiko.dao.engine;
 
 import android.app.Application;
 import android.text.TextUtils;
@@ -15,7 +15,6 @@ import seiko.neiko.dao.db.SiteDbApi;
 
 /**
  * Created by yuety on 15/8/3.
- *
  */
 public class DdSource extends SdSource {
     public final int ver; //版本号
@@ -48,29 +47,31 @@ public class DdSource extends SdSource {
     private ISdNode _objectSlf;
     private ISdNode _objectExt;
 
-    public DdNode tag(String url){
-        Log.v("tag.selct::",url);
-        return  (DdNode)_tag.nodeMatch(url);
-    }
-    public DdNode book(String url){
-        Log.v("book.selct::",url);
-        return  (DdNode)_book.nodeMatch(url);
-    }
-    public DdNode section(String url){
-        Log.v("section.selct::",url);
-        return  (DdNode)_section.nodeMatch(url);
+    public DdNode tag(String url) {
+        Log.v("tag.selct::", url);
+        return (DdNode) _tag.nodeMatch(url);
     }
 
-    public DdNode objectEx(String url){
-        Log.v("object.selct::",url);
-
-        return  (DdNode)_objectExt.nodeMatch(url);
+    public DdNode book(String url) {
+        Log.v("book.selct::", url);
+        return (DdNode) _book.nodeMatch(url);
     }
 
-    public DdNode objectSlf(String url){
-        Log.v("object.selct::",url);
+    public DdNode section(String url) {
+        Log.v("section.selct::", url);
+        return (DdNode) _section.nodeMatch(url);
+    }
 
-        return  (DdNode)_objectSlf.nodeMatch(url);
+    public DdNode objectEx(String url) {
+        Log.v("object.selct::", url);
+
+        return (DdNode) _objectExt.nodeMatch(url);
+    }
+
+    public DdNode objectSlf(String url) {
+        Log.v("object.selct::", url);
+
+        return (DdNode) _objectSlf.nodeMatch(url);
     }
 
     private final String trace_url;
@@ -91,14 +92,10 @@ public class DdSource extends SdSource {
         //sited = xml;
 
         doInit(app, xml);
-        if(schema > 0) {
+        if (schema > 0) {
             xmlHeadName = "meta";
             xmlBodyName = "main";
             xmlScriptName = "script";
-        } else {
-            xmlHeadName = "meta";
-            xmlBodyName = "main";
-            xmlScriptName = "jscript";
         }
         doLoad(app);
 
@@ -208,13 +205,21 @@ public class DdSource extends SdSource {
 //        }
     }
 
-    public static boolean isHots(SdNode node){return "hots".equals(node.name);}
+    public static boolean isHots(SdNode node) {
+        return "hots".equals(node.name);
+    }
 
-    public static boolean isUpdates(SdNode node){return "updates".equals(node.name);}
+    public static boolean isUpdates(SdNode node) {
+        return "updates".equals(node.name);
+    }
 
-    public static boolean isTags(SdNode node){return "tags".equals(node.name);}
+    public static boolean isTags(SdNode node) {
+        return "tags".equals(node.name);
+    }
 
-    public static boolean isBook(SdNode node){return "book".equals(node.name);}
+    public static boolean isBook(SdNode node) {
+        return "book".equals(node.name);
+    }
 
 
     //

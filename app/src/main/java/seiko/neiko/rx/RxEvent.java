@@ -18,6 +18,8 @@ public class RxEvent {
 
     public static final int EVENT_SECTION1_SAVE = 31;
 
+    // 测试用的
+    public static final int EVENT_ERROR_OCCURRED = -39;
 
     private int type;
     private Object[] data;

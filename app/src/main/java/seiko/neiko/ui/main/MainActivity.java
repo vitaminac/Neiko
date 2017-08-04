@@ -4,6 +4,7 @@ import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -58,12 +59,16 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     @BindView(R.id.id_nv_menu)
     NavigationView mNav;
 
-    /** 页面集合 */
+    /**
+     * 页面集合
+     */
     private List<Fragment> fragmentList;
     private boolean flag = false;
 
     @Override
-    public int getLayoutId() {return R.layout.activity_main;}
+    public int getLayoutId() {
+        return R.layout.activity_main;
+    }
 
     @Override
     public void initViews(Bundle bundle) {
@@ -98,9 +103,29 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 bud.clear();
             }
         }
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                debug();
+            }
+        }, 4000);
     }
 
-    /** 监听滑动菜单 */
+
+    private void debug() {
+        try {
+            final String testSitedPlugin = FileUtil.toString(getResources().openRawResource(getResources().getIdentifier("out", "raw", this.getPackageName())));
+            FileUtil.saveText2Sdcard(Environment.getExternalStorageDirectory().getAbsolutePath() + "/dbg.sited", testSitedPlugin);
+            addSource(testSitedPlugin);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
+
+    /**
+     * 监听滑动菜单
+     */
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -152,21 +177,33 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
         private String[] pagers = new String[]{"主页", "收藏", "历史"};
 
-        private MyFragStatePagerAdapter(FragmentManager fm) {super(fm);}
+        private MyFragStatePagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
 
         @Override
-        public Fragment getItem(int position) {return fragmentList.get(position);}
+        public Fragment getItem(int position) {
+            return fragmentList.get(position);
+        }
 
         @Override
-        public int getCount() {return fragmentList.size();}
+        public int getCount() {
+            return fragmentList.size();
+        }
 
         @Override
-        public CharSequence getPageTitle(int position) {return pagers[position];}
+        public CharSequence getPageTitle(int position) {
+            return pagers[position];
+        }
     }
 
-    /** 安装sited插件操作 */
+    /**
+     * 安装sited插件操作
+     */
     @Override
-    protected void onNewIntent(Intent intent) {super.onNewIntent(intent);}
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+    }
 
     protected boolean forIntent(Intent intent) {
         if (intent == null)
@@ -184,10 +221,10 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
         /* 通过网络打开的链接 例如：http://sited.moear.org/addin/site1041.sited.xml */
         if (scheme.equals("sited")) {
-            if(!"data".equals(uri.getHost())) return false;
+            if (!"data".equals(uri.getHost())) return false;
 
-            String webUrl =  EncryptUtil.b64_decode(uri.getQuery()).replace("sited://", "http://");
-            if(!webUrl.contains(".sited")) return false;
+            String webUrl = EncryptUtil.b64_decode(uri.getQuery()).replace("sited://", "http://");
+            if (!webUrl.contains(".sited")) return false;
 
             OkHttpProxy.get().url(webUrl).enqueue(new OkCallback<String>(new OkTextParser()) {
                 @Override
@@ -196,31 +233,32 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 }
 
                 @Override
-                public void onFailure(Throwable e) {}
+                public void onFailure(Throwable e) {
+                }
             });
             return true;
         }
 
         /* 通过本地打开的链接 例如：file:///storage/emulated/0/Tencent/QQfile_recv/kuaikan.sited */
-        if (scheme.equals("file")) {
-            try {
-                ContentResolver cr = this.getContentResolver();
-                final String sited = FileUtil.toString(cr.openInputStream(uri));
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        addSource(sited);
-                    }
-                }, 1000);  //读取太快，需要延迟处理
-                return true;
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
+        try {
+            ContentResolver cr = this.getContentResolver();
+            final String sited = FileUtil.toString(cr.openInputStream(uri));
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    addSource(sited);
+                }
+            }, 1000);  //读取太快，需要延迟处理
+            return true;
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
         return false;
     }
 
-    /** 添加插件 */
+    /**
+     * 添加插件
+     */
     private void addSource(String s) {
         if (TextUtils.isEmpty(s)) return;
 

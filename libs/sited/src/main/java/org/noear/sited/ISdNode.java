@@ -1,7 +1,7 @@
 package org.noear.sited;
 
 /**
- * Created by yuety on 15/8/21. Y
+ * Created by yuety on 15/8/21.
  */
 public interface ISdNode {
     String nodeName();

@@ -5,7 +5,7 @@ buildscript {
     }
     dependencies {
         //替换成最新的 gradle版本
-        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath 'com.android.tools.build:gradle:2.3.3'
         //用于：BindView
         classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.1'
         //用于：java1.8

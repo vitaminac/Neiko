@@ -71,7 +71,9 @@ public class MainSiteDFragment extends BaseFragment implements OnDragListener {
     }
 
     @Override
-    public int getLayoutId() {return R.layout.fragment_main;}
+    public int getLayoutId() {
+        return R.layout.fragment_main;
+    }
 
     @Override
     public void initViews(Bundle bundle) {
@@ -91,7 +93,9 @@ public class MainSiteDFragment extends BaseFragment implements OnDragListener {
     }
 
     //===============================================
-    /** 打开插件中心 */
+    /**
+     * 打开插件中心
+     */
     private AlertDialog dialog;
 
     @OnClick(R.id.fab_web)
@@ -138,7 +142,10 @@ public class MainSiteDFragment extends BaseFragment implements OnDragListener {
     }
 
     //=====================================
-    /** RxBus */
+
+    /**
+     * RxBus
+     */
     private void RxAndroid() {
         addSubscription(RxEvent.EVENT_COPY_SITED, new Consumer<RxEvent>() {
             @Override
@@ -153,15 +160,20 @@ public class MainSiteDFragment extends BaseFragment implements OnDragListener {
             public void accept(RxEvent event) throws Exception {
                 SourceModel m = (SourceModel) event.getData();
                 if (adapter != null) {
-                    for (SourceModel m1:adapter.getData()) {
+                    for (SourceModel m1 : adapter.getData()) {
                         if (m1.title.contains(m.title))
                             return;
                     }
-
                     adapter.add(m);
-
                     saveData();
                 }
+            }
+        });
+        addSubscription(RxEvent.EVENT_ERROR_OCCURRED, new Consumer<RxEvent>() {
+            @Override
+            public void accept(RxEvent event) throws Exception {
+                String t = (String) event.getData();
+                toast(t);
             }
         });
         /* 删除模式 */
@@ -171,13 +183,13 @@ public class MainSiteDFragment extends BaseFragment implements OnDragListener {
                 if (isdelete) {
                     fab_delete.setSelected(false);
                     isdelete = false;
-                    for (ShowView view:shows) {
+                    for (ShowView view : shows) {
                         view.ShowCheck(false);
                     }
                 } else {
                     fab_delete.setSelected(true);
                     isdelete = true;
-                    for (ShowView view:shows) {
+                    for (ShowView view : shows) {
                         view.ShowCheck(true);
                     }
                 }
@@ -188,32 +200,36 @@ public class MainSiteDFragment extends BaseFragment implements OnDragListener {
     }
 
     //=====================================
-    /** List相关 */
+
+    /**
+     * List相关
+     */
     private void loadList() {
         Flowable.create(new FlowableOnSubscribe<List<SourceModel>>() {
-                    @Override
-                    public void subscribe(FlowableEmitter<List<SourceModel>> e) throws Exception {
-                        Type type = new TypeToken<List<SourceModel>>(){}.getType();
-                        List<SourceModel> list = FileUtil.get(cachePath + "main/siteDList", type);
+            @Override
+            public void subscribe(FlowableEmitter<List<SourceModel>> e) throws Exception {
+                Type type = new TypeToken<List<SourceModel>>() {
+                }.getType();
+                List<SourceModel> list = FileUtil.get(cachePath + "main/siteDList", type);
 
-                        if (list == null) {
-                            Log.d("MainSiteD", "本地加载失败");
-                            list = new ArrayList<>();
-                            File file = new File(sitedPath);
+                if (list == null) {
+                    Log.d("MainSiteD", "本地加载失败");
+                    list = new ArrayList<>();
+                    File file = new File(sitedPath);
 
-                            if (file.listFiles() != null && file.listFiles().length > 0) {
-                                for (File a : file.listFiles()) {
-                                    SourceModel m = new SourceModel();
-                                    m.title = a.getName();
-                                    list.add(m);
-                                }
-                            }
+                    if (file.listFiles() != null && file.listFiles().length > 0) {
+                        for (File a : file.listFiles()) {
+                            SourceModel m = new SourceModel();
+                            m.title = a.getName();
+                            list.add(m);
                         }
-
-                        e.onNext(list);
-                        e.onComplete();
                     }
-                }, BackpressureStrategy.ERROR)
+                }
+
+                e.onNext(list);
+                e.onComplete();
+            }
+        }, BackpressureStrategy.ERROR)
                 .subscribeOn(Schedulers.io())
                 .delay(500, TimeUnit.MILLISECONDS)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -228,7 +244,9 @@ public class MainSiteDFragment extends BaseFragment implements OnDragListener {
     private boolean ischange = false;
 
     @Override
-    public void onFinishDrag() {ischange = true;}
+    public void onFinishDrag() {
+        ischange = true;
+    }
 
     @Override
     public void onDestroy() {

@@ -1,6 +1,7 @@
 package org.noear.sited;
 
 import android.app.Application;
+import android.util.Log;
 
 import com.eclipsesource.v8.JavaVoidCallback;
 import com.eclipsesource.v8.Releasable;
@@ -8,8 +9,10 @@ import com.eclipsesource.v8.V8;
 import com.eclipsesource.v8.V8Array;
 import com.eclipsesource.v8.V8Object;
 
+import java.util.Map;
+
 /**
- * Created by yuety on 15/8/2. Y
+ * Created by yuety on 15/8/2.
  */
 class JsEngine {
     private V8 engine = null;
@@ -27,14 +30,12 @@ class JsEngine {
         this.source = sd;
         this.engine = V8.createV8Runtime(null, app.getApplicationInfo().dataDir);
 
-        JavaVoidCallback callback =new JavaVoidCallback() {
-            @Override
-            public void invoke(V8Object receiver, V8Array parameters) {
+        JavaVoidCallback callback = new JavaVoidCallback() {
+            public void invoke(final V8Object receiver, final V8Array parameters) {
                 if (parameters.length() > 0) {
                     Object arg1 = parameters.get(0);
 
-                    Util.log(source, "JsEngine.print", (String) arg1);
-
+                    SdApi.log(source, "JsEngine.print", (String) arg1);
 
                     if (arg1 instanceof Releasable) {
                         ((Releasable) arg1).release();
@@ -55,14 +56,16 @@ class JsEngine {
         v8Ext.release();
     }
 
-    public synchronized JsEngine loadJs(String funs) {
+    public synchronized JsEngine loadJs(String code) {
+
         try {
-            engine.executeVoidScript(funs);//预加载了批函数
+            engine.executeVoidScript(code);//预加载了批函数
         } catch (Exception ex) {
             ex.printStackTrace();
-            Util.log(source, "JsEngine.loadJs", ex.getMessage(), ex);
+            SdApi.log(source, "JsEngine.loadJs", ex);
             throw ex;
         }
+
         return this;
     }
 
@@ -75,10 +78,12 @@ class JsEngine {
                 params.push(p);
             }
 
-            return engine.executeStringFunction(fun, params);
+            String temp = engine.executeStringFunction(fun, params);
+
+            return temp;
         } catch (Exception ex) {
             ex.printStackTrace();
-            Util.log(source, "JsEngine.callJs:" + fun, ex.getMessage(), ex);
+            SdApi.log(source, "JsEngine.callJs:" + fun,  ex);
             return null;
         }
     }

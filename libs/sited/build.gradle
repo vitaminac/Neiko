@@ -1,13 +1,14 @@
 apply plugin: 'com.android.library'
+apply plugin: 'me.tatarka.retrolambda'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '25.0.2'
+    buildToolsVersion '25.0.3'
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 11
-        versionName "0.0.11"
+        versionCode 30
+        versionName "0.0.30"
     }
     buildTypes {
         release {
@@ -15,13 +16,23 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     productFlavors {
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs' //this way we can find the .aar file in libs folder
+        }
     }
 }
 
 
 dependencies {
-    //compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'com.loopj.android:android-async-http:1.4.9'
     compile 'com.eclipsesource.j2v8:j2v8:3.1.6@aar'
     compile 'com.squareup.okhttp3:okhttp:3.5.0'
 }

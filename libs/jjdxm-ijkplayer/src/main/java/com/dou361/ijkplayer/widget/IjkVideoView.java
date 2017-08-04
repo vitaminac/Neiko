@@ -79,6 +79,7 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
      * 播放器的一些基本配置
      */
     private Map<String, String> mHeaders;
+    private Map<String, String> mOptions;
 
     /**
      * mCurrentState is a VideoView object's current state.
@@ -338,7 +339,11 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
      */
     private void setVideoURI(Uri uri, Map<String, String> headers) {
         mUri = uri;
-        mHeaders = headers;
+        if (mUri.toString().startsWith("rtmp")) {
+            mOptions = headers;
+        } else {
+            mHeaders = headers;
+        }
         mSeekWhenPrepared = 0;
         openVideo();
         requestLayout();
@@ -379,47 +384,48 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
         am.requestAudioFocus(null, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
 
         try {
-            if (usingAndroidPlayer) {
-                mMediaPlayer = new AndroidMediaPlayer();
-            } else {
-                IjkMediaPlayer ijkMediaPlayer = null;
-                if (mUri != null) {
-                    ijkMediaPlayer = new IjkMediaPlayer();
-                    ijkMediaPlayer.native_setLogLevel(IjkMediaPlayer.IJK_LOG_DEBUG);
 
-                    if (usingMediaCodec) {
-                        ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec", 1);
-                        if (usingMediaCodecAutoRotate) {
-                            ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec-auto-rotate", 1);
-                        } else {
-                            ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec-auto-rotate", 0);
-                        }
+            IjkMediaPlayer ijkMediaPlayer = null;
+            if (mUri != null) {
+                ijkMediaPlayer = new IjkMediaPlayer();
+                ijkMediaPlayer.native_setLogLevel(IjkMediaPlayer.IJK_LOG_DEBUG);
+
+                if (usingMediaCodec) {
+                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec", 1);
+                    if (usingMediaCodecAutoRotate) {
+                        ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec-auto-rotate", 1);
                     } else {
-                        ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec", 0);
+                        ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec-auto-rotate", 0);
                     }
-
-                    if (usingOpenSLES) {
-                        ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "opensles", 1);
-                    } else {
-                        ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "opensles", 0);
-                    }
-
-                    if (TextUtils.isEmpty(pixelFormat)) {
-                        ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "overlay-format", IjkMediaPlayer.SDL_FCC_RV32);
-                    } else {
-                        ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "overlay-format", pixelFormat);
-                    }
-                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "framedrop", 1);
-                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "start-on-prepared", 0);
-
-                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_FORMAT, "http-detect-range-support", 0);
-                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_FORMAT, "timeout", 10000000);
-                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_FORMAT, "reconnect", 1);
-
-                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_CODEC, "skip_loop_filter", 48);
+                } else {
+                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec", 0);
                 }
-                mMediaPlayer = ijkMediaPlayer;
+
+                if (usingOpenSLES) {
+                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "opensles", 1);
+                } else {
+                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "opensles", 0);
+                }
+
+                if (TextUtils.isEmpty(pixelFormat)) {
+                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "overlay-format", IjkMediaPlayer.SDL_FCC_RV32);
+                } else {
+                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "overlay-format", pixelFormat);
+                }
+                ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "framedrop", 1);
+                ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "start-on-prepared", 0);
+
+                ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_FORMAT, "http-detect-range-support", 0);
+                ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_FORMAT, "timeout", 10000000);
+                ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_FORMAT, "reconnect", 1);
+
+                ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_CODEC, "skip_loop_filter", 48);
             }
+            if (!mOptions.isEmpty()) {
+                for (Map.Entry<String, String> entry : mOptions.entrySet())
+                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_FORMAT, entry.getKey(), entry.getValue());
+            }
+            mMediaPlayer = ijkMediaPlayer;
 
             if (enableBackgroundPlay) {
                 mMediaPlayer = new TextureMediaPlayer(mMediaPlayer);
@@ -477,7 +483,10 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
             mTargetState = PlayStateParams.STATE_ERROR;
             mErrorListener.onError(mMediaPlayer, MediaPlayer.MEDIA_ERROR_UNKNOWN, 0);
             return;
+        } catch (Exception e) {
+            Exception q = e;
         } finally {
+            String a = "2";
             // REMOVED: mPendingSubtitleTracks.clear();
         }
     }

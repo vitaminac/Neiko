@@ -58,7 +58,7 @@ public class DdApi extends SdApi {
      * v9 : 增加对#hash的过滤处理；增加hasMicroDefine()
      * v8 : 增加parseUrl()->"xxx;xxxx;xxx"的支持
      * */
-    public static int version() {return 30;}
+    public static int version() {return 36;}
 
     static String unsuan(String str, String key) {
         StringBuilder sb = new StringBuilder();

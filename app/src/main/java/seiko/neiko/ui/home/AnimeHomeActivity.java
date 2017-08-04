@@ -10,16 +10,22 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.arlib.floatingsearchview.FloatingSearchView;
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
+
 import org.noear.sited.SdSourceCallback;
+
 import java.util.ArrayList;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import seiko.neiko.dao.engine.DdApi;
 import seiko.neiko.models.HomeSaveEvent;
 import seiko.neiko.R;
 import seiko.neiko.dao.SourceApi;
+import seiko.neiko.rx.RxBus;
+import seiko.neiko.rx.RxEvent;
 import seiko.neiko.ui.search.SearchActivity;
 import seiko.neiko.utils.FileUtil;
 import seiko.neiko.ui.main.MainViewModel;
@@ -48,7 +54,9 @@ public class AnimeHomeActivity extends BaseSwipeLayout implements FloatingSearch
     private String path;
 
     @Override
-    public int getLayoutId() {return R.layout.activity_home;}
+    public int getLayoutId() {
+        return R.layout.activity_home;
+    }
 
     @Override
     public void initViews(Bundle bundle) {
@@ -61,7 +69,10 @@ public class AnimeHomeActivity extends BaseSwipeLayout implements FloatingSearch
     }
 
     //=================================================
-    /** 尝试从本地获得参数 */
+
+    /**
+     * 尝试从本地获得参数
+     */
     private void getPath() {
         HomeSaveEvent event = FileUtil.get(path, HomeSaveEvent.class);
         if (event != null)
@@ -70,16 +81,21 @@ public class AnimeHomeActivity extends BaseSwipeLayout implements FloatingSearch
             getNodeViewModel();
     }
 
-    /** 从网络中获得内容 */
+    /**
+     * 从网络中获得内容
+     */
     private void getNodeViewModel() {
         model.clear();
         source.getNodeViewModel(model, source.home, true, new SdSourceCallback() {
             @Override
             public void run(Integer code) {
-                if (code==1) {
+                if (code == 1) {
                     HomeSaveEvent event = new HomeSaveEvent(model.hotList, model.tagList);
                     FileUtil.save(path, event);
                     addList(event);
+                } else if (adapter_hot == null) {
+                    RxBus.getDefault().post(new RxEvent(RxEvent.EVENT_ERROR_OCCURRED, "插件加载失败"));
+                    AnimeHomeActivity.super.finish();
                 } else {
                     adapter_hot.loadMoreFailed();
                 }
@@ -106,7 +122,10 @@ public class AnimeHomeActivity extends BaseSwipeLayout implements FloatingSearch
     }
 
     //=================================================
-    /** 添加界面及其设置 */
+
+    /**
+     * 添加界面及其设置
+     */
     //热门
     private void addHot() {
         View hot = inflate(R.layout.fragment_home_hot, mViewPager);
@@ -149,15 +168,22 @@ public class AnimeHomeActivity extends BaseSwipeLayout implements FloatingSearch
     }
 
     //=====================================================
-    /** 定义自己的ViewPager适配器。*/
+    /**
+     * 定义自己的ViewPager适配器。
+     */
     private ArrayList<View> views = new ArrayList<>();
+
     private class PagerAdapterMain2 extends PagerAdapter {
 
         @Override
-        public int getCount() {return views!=null ? views.size():0;}
+        public int getCount() {
+            return views != null ? views.size() : 0;
+        }
 
         @Override
-        public boolean isViewFromObject(View view, Object object) {return view == object;}
+        public boolean isViewFromObject(View view, Object object) {
+            return view == object;
+        }
 
         //每次滑动的时候生成的组件
         @Override
@@ -175,7 +201,10 @@ public class AnimeHomeActivity extends BaseSwipeLayout implements FloatingSearch
 
 
     //=====================================================
-    /** 搜索框相关 */
+
+    /**
+     * 搜索框相关
+     */
     @Override
     public void onSearchAction(String key) {
         SearchActivity.key = key;
@@ -184,7 +213,8 @@ public class AnimeHomeActivity extends BaseSwipeLayout implements FloatingSearch
     }
 
     @Override
-    public void onSuggestionClicked(SearchSuggestion ss) {}
+    public void onSuggestionClicked(SearchSuggestion ss) {
+    }
 
     private void SearchHint() {
         String name = DdApi.dtypeName(source.book(m.url).dtype());
@@ -193,7 +223,10 @@ public class AnimeHomeActivity extends BaseSwipeLayout implements FloatingSearch
     }
 
     //=====================================================
-    /** 重命名站点名称 */
+
+    /**
+     * 重命名站点名称
+     */
     @Override
     protected void onResume() {
         super.onResume();

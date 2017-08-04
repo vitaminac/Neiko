@@ -8,50 +8,60 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
- * Created by yuety on 15/8/21. Y
+ * Created by yuety on 15/8/21.
  */
 public class SdNodeSet implements ISdNode{
 
-    private List<ISdNode> _items = new ArrayList<>();
+    List<ISdNode> _items = new ArrayList<>();
 
-    protected void release(){_items.clear();}
+    protected void release(){
+        _items.clear();
+    }
 
     public final SdSource source;
 
     //---------------
 
-    public SdNodeSet(SdSource s){source = s;}
+    public SdNodeSet(SdSource s){
+        source = s;
+    }
 
-    public void OnDidInit(){}
+    public void OnDidInit(){
 
-    //数据类型
-    private int _dtype = 0;
-    public int dtype() {
+    }
+
+    private int _dtype=0;
+    public  int dtype() {
         if (_dtype > 0)
             return _dtype;
         else
             return 1;
+    }//数据类型
+    private int _btype=0;
+    public int btype(){
+        if(_btype>0)
+            return _btype;
+        else
+            return dtype();
     }
-//    private int _btype = 0;
-//    public  int btype(){
-//        if(_btype > 0)
-//            return _btype;
-//        else
-//            return dtype();
-//    }
 
-    public int nodeType() {return 2;}
-    public String nodeName() {return name;}
+    public int nodeType(){return 2;}
+    public String nodeName(){return name;}
     @Override
-    public boolean isEmpty() {return _items.size()==0;}
+    public boolean  isEmpty(){
+        return _items.size()==0;
+    }
 
     public String name;
     public SdAttributeList attrs = new SdAttributeList();
 
-    SdNodeSet buildForNode(Element element) {
+
+    protected SdNodeSet buildForNode(Element element) {
         if(element==null)
             return this;
 
@@ -73,7 +83,7 @@ public class SdNodeSet implements ISdNode{
             for (int i = 0, len = temp.getLength(); i < len; i++) {
                 Node p = temp.item(i);
 
-                if (p.getNodeType() == Node.ELEMENT_NODE && !p.hasAttributes() && p.hasChildNodes()) {
+                if (p.getNodeType() == Node.ELEMENT_NODE && p.hasAttributes() == false && p.hasChildNodes()) {
                     if(p.getChildNodes().getLength()==1) {
                         Node p2 = p.getFirstChild();
                         if (p2.getNodeType() == Node.TEXT_NODE) {
@@ -85,6 +95,7 @@ public class SdNodeSet implements ISdNode{
         }
 
         _dtype  = attrs.getInt("dtype");
+        _btype  = attrs.getInt("btype");
 
 
         NodeList xList = element.getChildNodes();
@@ -95,10 +106,10 @@ public class SdNodeSet implements ISdNode{
                 Element e1 = (Element) n1;
 
                 if (e1.hasAttributes()) {//说明是Node类型
-                    SdNode temp = Util.createNode(source).buildForNode(e1);
+                    SdNode temp = SdApi.createNode(source).buildForNode(e1);
                     this.add(temp);
-                } else {//说明是Set类型
-                    SdNodeSet temp = Util.createNodeSet(source).buildForNode(e1);
+                } else if(e1.hasChildNodes() && e1.getChildNodes().getLength()>1) {//说明是Set类型
+                    SdNodeSet temp = SdApi.createNodeSet(source).buildForNode(e1);
                     this.add(temp);
                 }
             }
@@ -108,14 +119,17 @@ public class SdNodeSet implements ISdNode{
         return this;
     }
 
-    Iterable<ISdNode> nodes() {return _items;}
+    public Iterable<ISdNode> nodes(){
+        return _items;
+    }
 
-    public ISdNode get(String name) {
+    public ISdNode get(String name){
         for(ISdNode n : _items){
             if(name.equals(n.nodeName()))
                 return n;
         }
-        return Util.createNode(source).buildForNode(null);
+
+        return SdApi.createNode(source).buildForNode(null);
     }
 
     public SdNode nodeMatch(String url){
@@ -126,8 +140,11 @@ public class SdNodeSet implements ISdNode{
                 return n1;
             }
         }
-        return Util.createNode(source).buildForNode(null);
+
+        return SdApi.createNode(source).buildForNode(null);
     }
 
-    protected void add(ISdNode node) {_items.add(node);}
+    protected void add(ISdNode node){
+        _items.add(node);
+    }
 }
