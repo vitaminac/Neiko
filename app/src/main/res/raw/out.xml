@@ -1,0 +1,1051 @@
+<!--?xml version="1.0" encoding="UTF-8" ?-->
+<site ver="1" debug="1" engine="34" schema="1">
+    <meta>
+        <ua>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.87 Safari/537.36</ua>
+        <guid>29f9bf9f88764349b662eaedbefd7cf0</guid>
+        <title>多瑙</title>
+        <intro>仅海外可用，顺便求个vip试试能不能破解</intro>
+        <author>贝塔</author>
+        <url>http://www.dnvod.tv/</url>
+        <expr>\.dnvod\.tv</expr>
+        <encode>utf-8</encode>
+	    <about title="反馈" mail="supermanenchina@gmail.com">
+		    <item txt="富强、民主、文明、和谐，自由、平等、公正、法治、爱国、敬业、诚信、友善、团结"  />
+		    <item txt="QQ 321340131"/>
+		<item />
+	    </about>
+    </meta>
+    <main dtype="3">
+        <home>
+            <hots cache="1d" title="热门" method="get" showImg="1" parse="searchParser" url="http://www.dnvod.tv/" />
+            <tags title="分类">
+                <item group="动漫"/>
+                <item title="首页" url="http://www.dnvod.tv/Movie/List.aspx?CID=0%2c1%2c6&amp;page=@page"/>
+                <item title="最近添加" url="http://www.dnvod.tv/Movie/List.aspx?isn=&amp;cid=0%2c1%2c6&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="最近更新" url="http://www.dnvod.tv/Movie/List.aspx?isn=1&amp;cid=0%2c1%2c6&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="正在连载" url="http://www.dnvod.tv/Movie/List.aspx?isn=2&amp;cid=0%2c1%2c6&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="人气最旺" url="http://www.dnvod.tv/Movie/List.aspx?isn=3&amp;cid=0%2c1%2c6&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="评分最高" url="http://www.dnvod.tv/Movie/List.aspx?isn=4&amp;cid=0%2c1%2c6&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="热血" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,6,46&amp;page=@page"/>
+                <item title="格斗" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,6,47&amp;page=@page"/>
+                <item title="机战" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,6,48&amp;page=@page"/>
+                <item title="少女" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,6,49&amp;page=@page"/>
+                <item title="竞技" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,6,51&amp;page=@page"/>
+                <item title="科幻" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,6,52&amp;page=@page"/>
+                <item title="魔幻" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,6,53&amp;page=@page"/>
+                <item title="爆笑" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,6,54&amp;page=@page"/>
+                <item title="推理" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,6,55&amp;page=@page"/>
+                <item title="灵异" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,6,56&amp;page=@page"/>
+                <item title="动画电影" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,6,57&amp;page=@page"/>
+                <item title="大陆" url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c6&amp;region=%e5%a4%a7%e9%99%86&amp;year=%e5%8e%bb%e5%b9%b4&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="港台" url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c6&amp;region=%e6%b8%af%e5%8f%b0&amp;year=%e5%8e%bb%e5%b9%b4&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="日韩" url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c6&amp;region=%e6%97%a5%e9%9f%a9&amp;year=%e5%8e%bb%e5%b9%b4&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="欧美" url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c6&amp;region=%e6%ac%a7%e7%be%8e&amp;year=%e5%8e%bb%e5%b9%b4&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="新马泰" url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c6&amp;region=%e6%96%b0%e9%a9%ac%e6%b3%b0&amp;year=%e5%8e%bb%e5%b9%b4&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="其他" url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c6&amp;region=%e5%85%b6%e4%bb%96&amp;year=%e5%8e%bb%e5%b9%b4&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="今年" url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c6&amp;region=&amp;year=%e4%bb%8a%e5%b9%b4&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="去年" url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c6&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="更早" url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c6&amp;region=&amp;year=%e6%9b%b4%e6%97%a9&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="90年代" url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c6&amp;region=&amp;year=90%e5%b9%b4%e4%bb%a3&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="80年代" url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c6&amp;region=&amp;year=80%e5%b9%b4%e4%bb%a3&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="怀旧" url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c6&amp;region=&amp;year=%e6%80%80%e6%97%a7&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+
+                <item group="电影"/>
+                <item title="首页" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,3&amp;page=@page"/>
+                <item title="最近添加" url="http://www.dnvod.tv/Movie/List.aspx?isn=&amp;cid=0%2c1%2c3&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="人气最旺" url="http://www.dnvod.tv/Movie/List.aspx?isn=3&amp;cid=0%2c1%2c3&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="评分最高" url="http://www.dnvod.tv/Movie/List.aspx?isn=4&amp;cid=0%2c1%2c3&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="喜剧" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,3,19&amp;page=@page"/>
+                <item title="爱情" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,3,20&amp;page=@page"/>
+                <item title="动作" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,3,21&amp;page=@page"/>
+                <item title="犯罪" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,3,22&amp;page=@page"/>
+                <item title="科幻" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,3,23&amp;page=@page"/>
+                <item title="奇幻" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,3,24&amp;page=@page"/>
+                <item title="冒险" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,3,25&amp;page=@page"/>
+                <item title="灾难" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,3,26&amp;page=@page"/>
+                <item title="惊悚" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,3,27&amp;page=@page"/>
+                <item title="剧情" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,3,28&amp;page=@page"/>
+                <item title="战争" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,3,29&amp;page=@page"/>
+                <item title="歌舞" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,3,30&amp;page=@page"/>
+                <item title="经典" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,3,31&amp;page=@page"/>
+                <item title="悬疑" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,3,32&amp;page=@page"/>
+                <item title="动画电影" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,3,113&amp;page=@page"/>
+                <item title="大陆" url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c3&amp;region=%e5%a4%a7%e9%99%86&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="港台"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c3&amp;region=%e6%b8%af%e5%8f%b0&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="日韩"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c3&amp;region=%e6%97%a5%e9%9f%a9&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="欧美"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c3&amp;region=%e6%ac%a7%e7%be%8e&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="新马泰"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c3&amp;region=%e6%96%b0%e9%a9%ac%e6%b3%b0&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="其他"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c3&amp;region=%e5%85%b6%e4%bb%96&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="今年"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c3&amp;region=&amp;year=%e4%bb%8a%e5%b9%b4&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="去年"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c3&amp;region=&amp;year=%e5%8e%bb%e5%b9%b4&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="更早"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c3&amp;region=&amp;year=%e6%9b%b4%e6%97%a9&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="90年代"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c3&amp;region=&amp;year=90%e5%b9%b4%e4%bb%a3&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="80年代"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c3&amp;region=&amp;year=80%e5%b9%b4%e4%bb%a3&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="怀旧"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c3&amp;region=&amp;year=%e6%80%80%e6%97%a7&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+
+                <item group="电视剧"/>
+                <item title="首页" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,4&amp;page=@page"/>
+                <item title="最近添加"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=&amp;cid=0%2c1%2c4&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="最近更新"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=1&amp;cid=0%2c1%2c4&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="正在连载"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=2&amp;cid=0%2c1%2c4&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="人气最旺"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=3&amp;cid=0%2c1%2c4&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="评分最高"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=4&amp;cid=0%2c1%2c4&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="国产剧" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,4,13&amp;page=@page"/>
+                <item title="港台剧" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,4,14&amp;page=@page"/>
+                <item title="日韩剧" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,4,15&amp;page=@page"/>
+                <item title="欧美剧" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,4,16&amp;page=@page"/>
+                <item title="新马泰" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,4,17&amp;page=@page"/>
+                <item title="其它剧" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,4,18&amp;page=@page"/>
+                <item title="大陆"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c4&amp;region=%e5%a4%a7%e9%99%86&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="港台"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c4&amp;region=%e6%b8%af%e5%8f%b0&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="日韩"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c4&amp;region=%e6%97%a5%e9%9f%a9&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="欧美"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c4&amp;region=%e6%ac%a7%e7%be%8e&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="新马泰"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c4&amp;region=%e6%96%b0%e9%a9%ac%e6%b3%b0&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="其他"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c4&amp;region=%e5%85%b6%e4%bb%96&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="今年"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c4&amp;region=&amp;year=%e4%bb%8a%e5%b9%b4&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="去年"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c4&amp;region=&amp;year=%e5%8e%bb%e5%b9%b4&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="更早"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c4&amp;region=&amp;year=%e6%9b%b4%e6%97%a9&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="90年代"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c4&amp;region=&amp;year=90%e5%b9%b4%e4%bb%a3&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="80年代"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c4&amp;region=&amp;year=80%e5%b9%b4%e4%bb%a3&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="怀旧"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c4&amp;region=&amp;year=%e6%80%80%e6%97%a7&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+
+                <item group="综艺"/>
+                <item title="首页" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,5&amp;page=@page"/>
+                <item title="最近添加"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=&amp;cid=0%2c1%2c5&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="最近更新"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=1&amp;cid=0%2c1%2c5&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="正在连载"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=2&amp;cid=0%2c1%2c5&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="人气最旺"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=3&amp;cid=0%2c1%2c5&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="评分最高"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=4&amp;cid=0%2c1%2c5&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="访谈" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,5,34&amp;page=@page"/>
+                <item title="选秀" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,5,38&amp;page=@page"/>
+                <item title="搞笑" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,5,40&amp;page=@page"/>
+                <item title="MV" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,5,94&amp;page=@page"/>
+                <item title="晚会" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,5,92&amp;page=@page"/>
+                <item title="竞技" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,5,91&amp;page=@page"/>
+                <item title="情感" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,5,33&amp;page=@page"/>
+                <item title="演唱会" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,5,44&amp;page=@page"/>
+                <item title="真人秀" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,5,39&amp;page=@page"/>
+                <item title="脱口秀" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,5,43&amp;page=@page"/>
+                <item title="大陆"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c5&amp;region=%e5%a4%a7%e9%99%86&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="港台"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c5&amp;region=%e6%b8%af%e5%8f%b0&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="日韩"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c5&amp;region=%e6%97%a5%e9%9f%a9&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="欧美"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c5&amp;region=%e6%ac%a7%e7%be%8e&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="新马泰"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c5&amp;region=%e6%96%b0%e9%a9%ac%e6%b3%b0&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="其他"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c5&amp;region=%e5%85%b6%e4%bb%96&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="今年"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c5&amp;region=&amp;year=%e4%bb%8a%e5%b9%b4&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="去年"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c5&amp;region=&amp;year=%e5%8e%bb%e5%b9%b4&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="更早"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c5&amp;region=&amp;year=%e6%9b%b4%e6%97%a9&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="90年代"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c5&amp;region=&amp;year=90%e5%b9%b4%e4%bb%a3&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="80年代"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c5&amp;region=&amp;year=80%e5%b9%b4%e4%bb%a3&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="怀旧"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c5&amp;region=&amp;year=%e6%80%80%e6%97%a7&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+
+                <item group="纪录片"/>
+                <item title="首页" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,7&amp;page=@page"/>
+                <item title="最近添加"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=&amp;cid=0%2c1%2c7&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="最近更新"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=1&amp;cid=0%2c1%2c7&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="正在连载"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=2&amp;cid=0%2c1%2c7&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="人气最旺"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=3&amp;cid=0%2c1%2c7&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="评分最高"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=4&amp;cid=0%2c1%2c7&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="文化" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,7,50&amp;page=@page"/>
+                <item title="探索" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,7,59&amp;page=@page"/>
+                <item title="军事" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,7,60&amp;page=@page"/>
+                <item title="解密" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,7,61&amp;page=@page"/>
+                <item title="科技" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,7,62&amp;page=@page"/>
+                <item title="历史" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,7,63&amp;page=@page"/>
+                <item title="人物" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,7,64&amp;page=@page"/>
+                <item title="自然" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,7,66&amp;page=@page"/>
+                <item title="大陆"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c7&amp;region=%e5%a4%a7%e9%99%86&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="港台"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c7&amp;region=%e6%b8%af%e5%8f%b0&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="日韩"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c7&amp;region=%e6%97%a5%e9%9f%a9&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="欧美"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c7&amp;region=%e6%ac%a7%e7%be%8e&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="新马泰"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c7&amp;region=%e6%96%b0%e9%a9%ac%e6%b3%b0&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="其他"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c7&amp;region=%e5%85%b6%e4%bb%96&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="今年"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c7&amp;region=&amp;year=%e4%bb%8a%e5%b9%b4&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="去年"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c7&amp;region=&amp;year=%e5%8e%bb%e5%b9%b4&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="更早"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c7&amp;region=&amp;year=%e6%9b%b4%e6%97%a9&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="90年代"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c7&amp;region=&amp;year=90%e5%b9%b4%e4%bb%a3&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="80年代"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c7&amp;region=&amp;year=80%e5%b9%b4%e4%bb%a3&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="怀旧"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c7&amp;region=&amp;year=%e6%80%80%e6%97%a7&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+
+                <item group="体育"/>
+                <item title="首页" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,95&amp;page=@page"/>
+                <item title="最近添加"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=&amp;cid=0%2c1%2c95&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="最近更新"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=1&amp;cid=0%2c1%2c95&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="正在连载"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=2&amp;cid=0%2c1%2c95&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="人气最旺"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=3&amp;cid=0%2c1%2c95&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="评分最高"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=4&amp;cid=0%2c1%2c95&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="奥运" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,95,99&amp;page=@page"/>
+                <item title="综合" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,95,98&amp;page=@page"/>
+                <item title="篮球" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,95,97&amp;page=@page"/>
+                <item title="足球" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,95,96&amp;page=@page"/>
+                <item title="大陆"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c95&amp;region=%e5%a4%a7%e9%99%86&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="港台"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c95&amp;region=%e6%b8%af%e5%8f%b0&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="日韩"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c95&amp;region=%e6%97%a5%e9%9f%a9&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="欧美"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c95&amp;region=%e6%ac%a7%e7%be%8e&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="新马泰"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c95&amp;region=%e6%96%b0%e9%a9%ac%e6%b3%b0&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="其他"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c95&amp;region=%e5%85%b6%e4%bb%96&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="今年"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c95&amp;region=&amp;year=%e4%bb%8a%e5%b9%b4&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="去年"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c95&amp;region=&amp;year=%e5%8e%bb%e5%b9%b4&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="更早" url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c95&amp;region=&amp;year=%e6%9b%b4%e6%97%a9&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="90年代" url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c95&amp;region=&amp;year=90%e5%b9%b4%e4%bb%a3&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="80年代" url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c95&amp;region=&amp;year=80%e5%b9%b4%e4%bb%a3&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="怀旧" url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c95&amp;region=&amp;year=%e6%80%80%e6%97%a7&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+
+                <item group="华人圈"/>
+                <item title="首页" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,8&amp;page=@page"/>
+                <item title="最近添加"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=&amp;cid=0%2c1%2c8&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="最近更新"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=1&amp;cid=0%2c1%2c8&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="正在连载"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=2&amp;cid=0%2c1%2c8&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="人气最旺"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=3&amp;cid=0%2c1%2c8&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="评分最高"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=4&amp;cid=0%2c1%2c8&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="动态" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,8,68&amp;page=@page"/>
+                <item title="生活" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,8,69&amp;page=@page"/>
+                <item title="华人风采" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,8,72&amp;page=@page"/>
+                <item title="比赛" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,8,70&amp;page=@page"/>
+                <item title="演出" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,8,71&amp;page=@page"/>
+                <item title="大陆"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c8&amp;region=%e5%a4%a7%e9%99%86&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="港台"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c8&amp;region=%e6%b8%af%e5%8f%b0&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="日韩"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c8&amp;region=%e6%97%a5%e9%9f%a9&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="欧美"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c8&amp;region=%e6%ac%a7%e7%be%8e&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="新马泰"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c8&amp;region=%e6%96%b0%e9%a9%ac%e6%b3%b0&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="其他"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c8&amp;region=%e5%85%b6%e4%bb%96&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="今年"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c8&amp;region=&amp;year=%e4%bb%8a%e5%b9%b4&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="去年"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c8&amp;region=&amp;year=%e5%8e%bb%e5%b9%b4&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="更早"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c8&amp;region=&amp;year=%e6%9b%b4%e6%97%a9&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="90年代"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c8&amp;region=&amp;year=90%e5%b9%b4%e4%bb%a3&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="80年代"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c8&amp;region=&amp;year=80%e5%b9%b4%e4%bb%a3&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="怀旧"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c8&amp;region=&amp;year=%e6%80%80%e6%97%a7&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+
+                <item group="游戏"/>
+                <item title="首页" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,100&amp;page=@page"/>
+                <item title="最近添加"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=&amp;cid=0%2c1%2c100&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="最近更新"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=1&amp;cid=0%2c1%2c100&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="正在连载"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=2&amp;cid=0%2c1%2c100&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="人气最旺"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=3&amp;cid=0%2c1%2c100&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="评分最高"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=4&amp;cid=0%2c1%2c100&amp;region=&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="网游/单机" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,100,107&amp;page=@page"/>
+                <item title="炉石传说" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,100,106&amp;page=@page"/>
+                <item title="游戏预告" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,100,105&amp;page=@page"/>
+                <item title="China Joy" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,100,104&amp;page=@page"/>
+                <item title="英雄联盟" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,100,103&amp;page=@page"/>
+                <item title="DOTA 2" url="http://www.dnvod.tv/Movie/List.aspx?cid=0,1,100,101&amp;page=@page"/>
+                <item title="大陆"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c100&amp;region=%e5%a4%a7%e9%99%86&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="港台"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c100&amp;region=%e6%b8%af%e5%8f%b0&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="日韩"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c100&amp;region=%e6%97%a5%e9%9f%a9&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="欧美"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c100&amp;region=%e6%ac%a7%e7%be%8e&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="新马泰"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c100&amp;region=%e6%96%b0%e9%a9%ac%e6%b3%b0&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="其他"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c100&amp;region=%e5%85%b6%e4%bb%96&amp;year=&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="今年"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c100&amp;region=&amp;year=%e4%bb%8a%e5%b9%b4&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="去年"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c100&amp;region=&amp;year=%e5%8e%bb%e5%b9%b4&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="更早"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c100&amp;region=&amp;year=%e6%9b%b4%e6%97%a9&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="90年代"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c100&amp;region=&amp;year=90%e5%b9%b4%e4%bb%a3&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="80年代"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c100&amp;region=&amp;year=80%e5%b9%b4%e4%bb%a3&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+                <item title="怀旧"
+url="http://www.dnvod.tv/Movie/List.aspx?isn=0&amp;cid=0%2c1%2c100&amp;region=&amp;year=%e6%80%80%e6%97%a7&amp;star=&amp;tags=&amp;dir=&amp;isfree=-1&amp;page=@page"/>
+
+                <item group="马克思主义历史唯物主义唯物辩论法与对资本主义的批判"/>
+                <item title="首页" url="http://www.dnvod.tv/Adult/"/>
+                <item title="推荐" url="http://www.dnvod.tv/Adult/Search.aspx?isindex=1&amp;page=@page"/>
+				<item title="最近添加" url="http://www.dnvod.tv/Adult/List.aspx?isn=&amp;cid=0%2c2%2c10&amp;year=&amp;star=&amp;tags=&amp;isfree=0&amp;label=&amp;page=@page"/>
+				<item title="评分最高" url="http://www.dnvod.tv/Adult/List.aspx?isn=2&amp;cid=0%2c2%2c10&amp;year=&amp;star=&amp;tags=&amp;isfree=0&amp;label=&amp;page=@page"/>
+				<item title="人气最旺" url="http://www.dnvod.tv/Adult/List.aspx?isn=1&amp;cid=0%2c2%2c10&amp;year=&amp;star=&amp;tags=&amp;isfree=0&amp;label=&amp;page=@page"/>
+                <item title="日韩3" url="http://www.dnvod.tv/Adult/List.aspx?CID=0,2,10,85&amp;page=@page"/>
+                <item title="欧美3" url="http://www.dnvod.tv/Adult/List.aspx?CID=0,2,10,86&amp;page=@page"/>
+                <item title="国产" url="http://www.dnvod.tv/Adult/List.aspx?CID=0,2,10,87&amp;page=@page"/>
+                <item title="卡通" url="http://www.dnvod.tv/Adult/List.aspx?CID=0,2,10,88&amp;page=@page"/>
+                <item title="其他" url="http://www.dnvod.tv/Adult/List.aspx?CID=0,2,10,90&amp;page=@page"/>
+                <item title="VR" url="http://www.dnvod.tv/Adult/List.aspx?CID=0,2,10,112&amp;page=@page"/>
+                <item title="免费" url="http://www.dnvod.tv/Adult/List.aspx?isfree=0&amp;page=@page"/>
+                <item title="美女" url="http://www.dnvod.tv/Adult/List.aspx?label=美女&amp;page=@page"/>
+                <item title="萝莉" url="http://www.dnvod.tv/Adult/List.aspx?label=萝莉&amp;page=@page"/>
+                <item title="甜美" url="http://www.dnvod.tv/Adult/List.aspx?label=甜美&amp;page=@page"/>
+                <item title="清纯" url="http://www.dnvod.tv/Adult/List.aspx?label=清纯&amp;page=@page"/>
+                <item title="学生" url="http://www.dnvod.tv/Adult/List.aspx?label=学生&amp;page=@page"/>
+                <item title="熟女" url="http://www.dnvod.tv/Adult/List.aspx?label=熟女&amp;page=@page"/>
+                <item title="人妻" url="http://www.dnvod.tv/Adult/List.aspx?label=人妻&amp;page=@page"/>
+                <item title="空姐" url="http://www.dnvod.tv/Adult/List.aspx?label=空姐&amp;page=@page"/>
+                <item title="家教" url="http://www.dnvod.tv/Adult/List.aspx?label=家教&amp;page=@page"/>
+                <item title="教师" url="http://www.dnvod.tv/Adult/List.aspx?label=教师&amp;page=@page"/>
+                <item title="护士" url="http://www.dnvod.tv/Adult/List.aspx?label=护士&amp;page=@page"/>
+                <item title="女仆" url="http://www.dnvod.tv/Adult/List.aspx?label=女仆&amp;page=@page"/>
+                <item title="白领" url="http://www.dnvod.tv/Adult/List.aspx?label=白领&amp;page=@page"/>
+                <item title="车模" url="http://www.dnvod.tv/Adult/List.aspx?label=车模&amp;page=@page"/>
+                <item title="小姐" url="http://www.dnvod.tv/Adult/List.aspx?label=小姐&amp;page=@page"/>
+                <item title="泳装" url="http://www.dnvod.tv/Adult/List.aspx?label=泳装&amp;page=@page"/>
+                <item title="运动" url="http://www.dnvod.tv/Adult/List.aspx?label=运动&amp;page=@page"/>
+                <item title="丝袜" url="http://www.dnvod.tv/Adult/List.aspx?label=丝袜&amp;page=@page"/>
+                <item title="美腿" url="http://www.dnvod.tv/Adult/List.aspx?label=美腿&amp;page=@page"/>
+                <item title="名模" url="http://www.dnvod.tv/Adult/List.aspx?label=名模&amp;page=@page"/>
+                <item title="无毛" url="http://www.dnvod.tv/Adult/List.aspx?label=无毛&amp;page=@page"/>
+                <item title="嫩穴" url="http://www.dnvod.tv/Adult/List.aspx?label=嫩穴&amp;page=@page"/>
+                <item title="巨乳" url="http://www.dnvod.tv/Adult/List.aspx?label=巨乳&amp;page=@page"/>
+                <item title="巨根" url="http://www.dnvod.tv/Adult/List.aspx?label=巨根&amp;page=@page"/>
+                <item title="人妖" url="http://www.dnvod.tv/Adult/List.aspx?label=人妖&amp;page=@page"/>
+                <item title="双飞" url="http://www.dnvod.tv/Adult/List.aspx?label=双飞&amp;page=@page"/>
+                <item title="群交" url="http://www.dnvod.tv/Adult/List.aspx?label=群交&amp;page=@page"/>
+                <item title="乱伦" url="http://www.dnvod.tv/Adult/List.aspx?label=乱伦&amp;page=@page"/>
+                <item title="强奸" url="http://www.dnvod.tv/Adult/List.aspx?label=强奸&amp;page=@page"/>
+                <item title="轮奸" url="http://www.dnvod.tv/Adult/List.aspx?label=轮奸&amp;page=@page"/>
+                <item title="迷奸" url="http://www.dnvod.tv/Adult/List.aspx?label=迷奸&amp;page=@page"/>
+                <item title="野战" url="http://www.dnvod.tv/Adult/List.aspx?label=野战&amp;page=@page"/>
+                <item title="车震" url="http://www.dnvod.tv/Adult/List.aspx?label=车震&amp;page=@page"/>
+                <item title="援交" url="http://www.dnvod.tv/Adult/List.aspx?label=援交&amp;page=@page"/>
+                <item title="破处" url="http://www.dnvod.tv/Adult/List.aspx?label=破处&amp;page=@page"/>
+                <item title="女同" url="http://www.dnvod.tv/Adult/List.aspx?label=女同&amp;page=@page"/>
+                <item title="痴汉" url="http://www.dnvod.tv/Adult/List.aspx?label=痴汉&amp;page=@page"/>
+                <item title="道具" url="http://www.dnvod.tv/Adult/List.aspx?label=道具&amp;page=@page"/>
+                <item title="另类" url="http://www.dnvod.tv/Adult/List.aspx?label=另类&amp;page=@page"/>
+                <item title="奇特" url="http://www.dnvod.tv/Adult/List.aspx?label=奇特&amp;page=@page"/>
+                <item title="重口" url="http://www.dnvod.tv/Adult/List.aspx?label=重口&amp;page=@page"/>
+                <item title="调教" url="http://www.dnvod.tv/Adult/List.aspx?label=调教&amp;page=@page"/>
+                <item title="性虐" url="http://www.dnvod.tv/Adult/List.aspx?label=性虐&amp;page=@page"/>
+                <item title="足交" url="http://www.dnvod.tv/Adult/List.aspx?label=足交&amp;page=@page"/>
+                <item title="黑人" url="http://www.dnvod.tv/Adult/List.aspx?label=黑人&amp;page=@page"/>
+                <item title="自拍" url="http://www.dnvod.tv/Adult/List.aspx?label=自拍&amp;page=@page"/>
+                <item title="偷拍" url="http://www.dnvod.tv/Adult/List.aspx?label=偷拍&amp;page=@page"/>
+                <item title="裸聊" url="http://www.dnvod.tv/Adult/List.aspx?label=裸聊&amp;page=@page"/>
+                <item title="三级" url="http://www.dnvod.tv/Adult/List.aspx?label=三级&amp;page=@page"/>
+                <item title="剧情" url="http://www.dnvod.tv/Adult/List.aspx?label=剧情&amp;page=@page"/>
+                <item title="中字" url="http://www.dnvod.tv/Adult/List.aspx?label=中字&amp;page=@page"/>
+                <item title="影视" url="http://www.dnvod.tv/Adult/List.aspx?label=影视&amp;page=@page"/>
+                <item title="卡通" url="http://www.dnvod.tv/Adult/List.aspx?label=卡通&amp;page=@page"/>
+                <item title="写真" url="http://www.dnvod.tv/Adult/List.aspx?label=写真&amp;page=@page"/>
+                <item title="苍井空" url="http://www.dnvod.tv/Adult/List.aspx?star=苍井空&amp;page=@page"/>
+                <item title="麻生希" url="http://www.dnvod.tv/Adult/List.aspx?star=麻生希&amp;page=@page"/>
+                <item title="吉泽明步" url="http://www.dnvod.tv/Adult/List.aspx?star=吉泽明步&amp;page=@page"/>
+                <item title="樱井莉亚" url="http://www.dnvod.tv/Adult/List.aspx?star=樱井莉亚&amp;page=@page"/>
+                <item title="杏树纱奈" url="http://www.dnvod.tv/Adult/List.aspx?star=杏树纱奈&amp;page=@page"/>
+                <item title="小泽玛莉亚" url="http://www.dnvod.tv/Adult/List.aspx?star=小泽玛莉亚&amp;page=@page"/>
+                <item title="松岛枫" url="http://www.dnvod.tv/Adult/List.aspx?star=松岛枫&amp;page=@page"/>
+                <item title="白咲舞" url="http://www.dnvod.tv/Adult/List.aspx?star=白咲舞&amp;page=@page"/>
+                <item title="成濑心美" url="http://www.dnvod.tv/Adult/List.aspx?star=成濑心美&amp;page=@page"/>
+                <item title="泷泽萝拉" url="http://www.dnvod.tv/Adult/List.aspx?star=泷泽萝拉&amp;page=@page"/>
+                <item title="村上里沙" url="http://www.dnvod.tv/Adult/List.aspx?star=村上里沙&amp;page=@page"/>
+                <item title="波多野结衣" url="http://www.dnvod.tv/Adult/List.aspx?star=波多野结衣&amp;page=@page"/>
+                <item title="麻仓优" url="http://www.dnvod.tv/Adult/List.aspx?star=麻仓优&amp;page=@page"/>
+                <item title="希山西" url="http://www.dnvod.tv/Adult/List.aspx?star=希山西&amp;page=@page"/>
+                <item title="立花里子" url="http://www.dnvod.tv/Adult/List.aspx?star=立花里子&amp;page=@page"/>
+                <item title="香坂百合" url="http://www.dnvod.tv/Adult/List.aspx?star=香坂百合&amp;page=@page"/>
+                <item title="相崎琴音" url="http://www.dnvod.tv/Adult/List.aspx?star=相崎琴音&amp;page=@page"/>
+                <item title="更多女优" url="http://www.dnvod.tv/Adult/List.aspx?star=&amp;page=@page"/>
+            </tags>
+        </home>
+        <search cache="1d" method="get" parse="searchParser" url="http://www.dnvod.tv/Movie/Search.aspx?tags=@key&amp;page=@page" header="referer=www.dvnod.tv"/>
+        <tag cache="1d" method="get" parse="searchParser" header="referer:www.dvnod.tv"/>
+        <book cache="1d" method="get" parse="bookParser" header="referer:www.dnvod.tv"/>
+        <section expr="Readyplay\.aspx" cache="0" method="post" parse="SectionParser" parseUrl="parseSectionUrl" buildArgs="buildSectionArgs" buildCookie="buildCookies" buildRef="buildRefer" buildHeader="buildHeader" header="referer;cookie"/>
+		<object buildHeader="buildRTMPParameter" />
+    </main>
+    <script>
+        <require>
+            <item url="http://sited.noear.org/addin/js/cheerio.js" lib="cheerio"/>
+        </require>
+        <code>
+            <![CDATA[
+"use strict";
+
+/* Production steps of ECMA-262, Edition 6, 22.1.2.1 */
+var getArrayFrom = (function () {
+    var toStr = Object.prototype.toString;
+    var isCallable = function (fn) {
+        return typeof fn === "function" || toStr.call(fn) === "[object Function]";
+    };
+    var toInteger = function (value) {
+        var number = Number(value);
+        if (isNaN(number)) { return 0; }
+        if (number === 0 || !isFinite(number)) { return number; }
+        return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));
+    };
+    var maxSafeInteger = Math.pow(2, 53) - 1;
+    var toLength = function (value) {
+        var len = toInteger(value);
+        return Math.min(Math.max(len, 0), maxSafeInteger);
+    };
+    return function from(arrayLike/*, mapFn, thisArg */) {
+        var C = this;
+
+        var items = Object(arrayLike);
+
+        if (arrayLike == null) {
+            throw new TypeError("Array.from requires an array-like object - not null or undefined");
+        }
+
+        var mapFn = arguments.length > 1 ? arguments[1] : void undefined;
+        var T;
+        if (typeof mapFn !== "undefined") {
+            if (!isCallable(mapFn)) {
+                throw new TypeError("Array.from: when provided, the second argument must be a function");
+            }
+            if (arguments.length > 2) {
+                T = arguments[2];
+            }
+        }
+        var len = toLength(items.length);
+        var A = isCallable(C) ? Object(new C(len)) : new Array(len);
+
+        var k = 0;
+        var kValue;
+        while (k < len) {
+            kValue = items[k];
+            if (mapFn) {
+                A[k] = typeof T === "undefined" ? mapFn(kValue, k) : mapFn.call(T, kValue, k);
+            } else {
+                A[k] = kValue;
+            }
+            k += 1;
+        }
+        A.length = len;
+        return A;
+    };
+}());
+
+function decodeBase64(str) {
+    var encodeArr = getArrayFrom(str);
+    var base64IndexTable = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    var len = encodeArr.length;
+    var pad = 0;
+    if (encodeArr[len - 1] === "=") {
+        pad++;
+        encodeArr[len - 1] = "A";
+        if (encodeArr[len - 2] === "=") {
+            pad++;
+            encodeArr[len - 2] = "A";
+        }
+    }
+    if ((encodeArr.length % 4 === 0)) {
+        var i;
+        var j;
+        var result = [];
+        var block = 0;
+        var mark = 255;
+        for (i = 0, j = 0; i < encodeArr.length; i += 4) {
+            block = (base64IndexTable.indexOf(encodeArr[i]) << 18) | (base64IndexTable.indexOf(encodeArr[i + 1]) << 12) | (base64IndexTable.indexOf(encodeArr[i + 2]) << 6) | (base64IndexTable.indexOf(encodeArr[i + 3]));
+            result[j++] = block >> 16;
+            result[j++] = (block >> 8) & mark;
+            result[j++] = block & mark;
+        }
+    }
+    return result.slice(0, result.length - pad).map(function (charCode) {
+        return String.fromCharCode(charCode);
+    }).join("");
+}
+
+function unpad(str) {
+    return str.slice(0, str.length - str[str.length - 1].charCodeAt());
+}
+
+function desCreateKeys(key) {
+    var pc2bytes0 = [0, 0x4, 0x20000000, 0x20000004, 0x10000, 0x10004, 0x20010000, 0x20010004, 0x200, 0x204, 0x20000200, 0x20000204, 0x10200, 0x10204, 0x20010200, 0x20010204];
+    var pc2bytes1 = [0, 0x1, 0x100000, 0x100001, 0x4000000, 0x4000001, 0x4100000, 0x4100001, 0x100, 0x101, 0x100100, 0x100101, 0x4000100, 0x4000101, 0x4100100, 0x4100101];
+    var pc2bytes2 = [0, 0x8, 0x800, 0x808, 0x1000000, 0x1000008, 0x1000800, 0x1000808, 0, 0x8, 0x800, 0x808, 0x1000000, 0x1000008, 0x1000800, 0x1000808];
+    var pc2bytes3 = [0, 0x200000, 0x8000000, 0x8200000, 0x2000, 0x202000, 0x8002000, 0x8202000, 0x20000, 0x220000, 0x8020000, 0x8220000, 0x22000, 0x222000, 0x8022000, 0x8222000];
+    var pc2bytes4 = [0, 0x40000, 0x10, 0x40010, 0, 0x40000, 0x10, 0x40010, 0x1000, 0x41000, 0x1010, 0x41010, 0x1000, 0x41000, 0x1010, 0x41010];
+    var pc2bytes5 = [0, 0x400, 0x20, 0x420, 0, 0x400, 0x20, 0x420, 0x2000000, 0x2000400, 0x2000020, 0x2000420, 0x2000000, 0x2000400, 0x2000020, 0x2000420];
+    var pc2bytes6 = [0, 0x10000000, 0x80000, 0x10080000, 0x2, 0x10000002, 0x80002, 0x10080002, 0, 0x10000000, 0x80000, 0x10080000, 0x2, 0x10000002, 0x80002, 0x10080002];
+    var pc2bytes7 = [0, 0x10000, 0x800, 0x10800, 0x20000000, 0x20010000, 0x20000800, 0x20010800, 0x20000, 0x30000, 0x20800, 0x30800, 0x20020000, 0x20030000, 0x20020800, 0x20030800];
+    var pc2bytes8 = [0, 0x40000, 0, 0x40000, 0x2, 0x40002, 0x2, 0x40002, 0x2000000, 0x2040000, 0x2000000, 0x2040000, 0x2000002, 0x2040002, 0x2000002, 0x2040002];
+    var pc2bytes9 = [0, 0x10000000, 0x8, 0x10000008, 0, 0x10000000, 0x8, 0x10000008, 0x400, 0x10000400, 0x408, 0x10000408, 0x400, 0x10000400, 0x408, 0x10000408];
+    var pc2bytes10 = [0, 0x20, 0, 0x20, 0x100000, 0x100020, 0x100000, 0x100020, 0x2000, 0x2020, 0x2000, 0x2020, 0x102000, 0x102020, 0x102000, 0x102020];
+    var pc2bytes11 = [0, 0x1000000, 0x200, 0x1000200, 0x200000, 0x1200000, 0x200200, 0x1200200, 0x4000000, 0x5000000, 0x4000200, 0x5000200, 0x4200000, 0x5200000, 0x4200200, 0x5200200];
+    var pc2bytes12 = [0, 0x1000, 0x8000000, 0x8001000, 0x80000, 0x81000, 0x8080000, 0x8081000, 0x10, 0x1010, 0x8000010, 0x8001010, 0x80010, 0x81010, 0x8080010, 0x8081010];
+    var pc2bytes13 = [0, 0x4, 0x100, 0x104, 0, 0x4, 0x100, 0x104, 0x1, 0x5, 0x101, 0x105, 0x1, 0x5, 0x101, 0x105];
+
+    var iterations = key.length > 8 ? 3 : 1;
+    var keys = new Array(32 * iterations);
+    var shifts = [0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0];
+    var lefttemp;
+    var righttemp;
+    var m = 0;
+    var n = 0;
+    var temp;
+    var left, right;
+    for (var j = 0; j < iterations; j++) {
+        left = (key.charCodeAt(m++) << 24) | (key.charCodeAt(m++) << 16) | (key.charCodeAt(m++) << 8) | key.charCodeAt(m++);
+        right = (key.charCodeAt(m++) << 24) | (key.charCodeAt(m++) << 16) | (key.charCodeAt(m++) << 8) | key.charCodeAt(m++);
+
+        temp = ((left >>> 4) ^ right) & 0x0f0f0f0f;
+        right ^= temp;
+        left ^= (temp << 4);
+        temp = ((right >>> -16) ^ left) & 0x0000ffff;
+        left ^= temp;
+        right ^= (temp << -16);
+        temp = ((left >>> 2) ^ right) & 0x33333333;
+        right ^= temp;
+        left ^= (temp << 2);
+        temp = ((right >>> -16) ^ left) & 0x0000ffff;
+        left ^= temp;
+        right ^= (temp << -16);
+        temp = ((left >>> 1) ^ right) & 0x55555555;
+        right ^= temp;
+        left ^= (temp << 1);
+        temp = ((right >>> 8) ^ left) & 0x00ff00ff;
+        left ^= temp;
+        right ^= (temp << 8);
+        temp = ((left >>> 1) ^ right) & 0x55555555;
+        right ^= temp;
+        left ^= (temp << 1);
+        temp = (left << 8) | ((right >>> 20) & 0x000000f0);
+        left = (right << 24) | ((right << 8) & 0xff0000) | ((right >>> 8) & 0xff00) | ((right >>> 24) & 0xf0);
+        right = temp;
+        for (var i = 0; i < shifts.length; i++) {
+            if (shifts[i]) {
+                left = (left << 2) | (left >>> 26);
+                right = (right << 2) | (right >>> 26);
+            } else {
+                left = (left << 1) | (left >>> 27);
+                right = (right << 1) | (right >>> 27);
+            }
+            left &= -0xf;
+            right &= -0xf;
+            lefttemp = pc2bytes0[left >>> 28] | pc2bytes1[(left >>> 24) & 0xf] |
+                pc2bytes2[(left >>> 20) & 0xf] | pc2bytes3[(left >>> 16) & 0xf] |
+                pc2bytes4[(left >>> 12) & 0xf] | pc2bytes5[(left >>> 8) & 0xf] |
+                pc2bytes6[(left >>> 4) & 0xf];
+            righttemp = pc2bytes7[right >>> 28] | pc2bytes8[(right >>> 24) & 0xf] |
+                pc2bytes9[(right >>> 20) & 0xf] | pc2bytes10[(right >>> 16) & 0xf] |
+                pc2bytes11[(right >>> 12) & 0xf] | pc2bytes12[(right >>> 8) & 0xf] |
+                pc2bytes13[(right >>> 4) & 0xf];
+            temp = ((righttemp >>> 16) ^ lefttemp) & 0x0000ffff;
+            keys[n++] = lefttemp ^ temp;
+            keys[n++] = righttemp ^ (temp << 16);
+        }
+    }
+    return keys;
+}
+
+function des(key, message, encrypt, mode, iv, padding) {
+    var spfunction1 = [0x1010400, 0, 0x10000, 0x1010404, 0x1010004, 0x10404, 0x4, 0x10000, 0x400, 0x1010400, 0x1010404, 0x400, 0x1000404, 0x1010004, 0x1000000, 0x4, 0x404, 0x1000400, 0x1000400, 0x10400, 0x10400, 0x1010000, 0x1010000, 0x1000404, 0x10004, 0x1000004, 0x1000004, 0x10004, 0, 0x404, 0x10404, 0x1000000, 0x10000, 0x1010404, 0x4, 0x1010000, 0x1010400, 0x1000000, 0x1000000, 0x400, 0x1010004, 0x10000, 0x10400, 0x1000004, 0x400, 0x4, 0x1000404, 0x10404, 0x1010404, 0x10004, 0x1010000, 0x1000404, 0x1000004, 0x404, 0x10404, 0x1010400, 0x404, 0x1000400, 0x1000400, 0, 0x10004, 0x10400, 0, 0x1010004];
+    var spfunction2 = [-0x7fef7fe0, -0x7fff8000, 0x8000, 0x108020, 0x100000, 0x20, -0x7fefffe0, -0x7fff7fe0, -0x7fffffe0, -0x7fef7fe0, -0x7fef8000, -0x80000000, -0x7fff8000, 0x100000, 0x20, -0x7fefffe0, 0x108000, 0x100020, -0x7fff7fe0, 0, -0x80000000, 0x8000, 0x108020, -0x7ff00000, 0x100020, -0x7fffffe0, 0, 0x108000, 0x8020, -0x7fef8000, -0x7ff00000, 0x8020, 0, 0x108020, -0x7fefffe0, 0x100000, -0x7fff7fe0, -0x7ff00000, -0x7fef8000, 0x8000, -0x7ff00000, -0x7fff8000, 0x20, -0x7fef7fe0, 0x108020, 0x20, 0x8000, -0x80000000, 0x8020, -0x7fef8000, 0x100000, -0x7fffffe0, 0x100020, -0x7fff7fe0, -0x7fffffe0, 0x100020, 0x108000, 0, -0x7fff8000, 0x8020, -0x80000000, -0x7fefffe0, -0x7fef7fe0, 0x108000];
+    var spfunction3 = [0x208, 0x8020200, 0, 0x8020008, 0x8000200, 0, 0x20208, 0x8000200, 0x20008, 0x8000008, 0x8000008, 0x20000, 0x8020208, 0x20008, 0x8020000, 0x208, 0x8000000, 0x8, 0x8020200, 0x200, 0x20200, 0x8020000, 0x8020008, 0x20208, 0x8000208, 0x20200, 0x20000, 0x8000208, 0x8, 0x8020208, 0x200, 0x8000000, 0x8020200, 0x8000000, 0x20008, 0x208, 0x20000, 0x8020200, 0x8000200, 0, 0x200, 0x20008, 0x8020208, 0x8000200, 0x8000008, 0x200, 0, 0x8020008, 0x8000208, 0x20000, 0x8000000, 0x8020208, 0x8, 0x20208, 0x20200, 0x8000008, 0x8020000, 0x8000208, 0x208, 0x8020000, 0x20208, 0x8, 0x8020008, 0x20200];
+    var spfunction4 = [0x802001, 0x2081, 0x2081, 0x80, 0x802080, 0x800081, 0x800001, 0x2001, 0, 0x802000, 0x802000, 0x802081, 0x81, 0, 0x800080, 0x800001, 0x1, 0x2000, 0x800000, 0x802001, 0x80, 0x800000, 0x2001, 0x2080, 0x800081, 0x1, 0x2080, 0x800080, 0x2000, 0x802080, 0x802081, 0x81, 0x800080, 0x800001, 0x802000, 0x802081, 0x81, 0, 0, 0x802000, 0x2080, 0x800080, 0x800081, 0x1, 0x802001, 0x2081, 0x2081, 0x80, 0x802081, 0x81, 0x1, 0x2000, 0x800001, 0x2001, 0x802080, 0x800081, 0x2001, 0x2080, 0x800000, 0x802001, 0x80, 0x800000, 0x2000, 0x802080];
+    var spfunction5 = [0x100, 0x2080100, 0x2080000, 0x42000100, 0x80000, 0x100, 0x40000000, 0x2080000, 0x40080100, 0x80000, 0x2000100, 0x40080100, 0x42000100, 0x42080000, 0x80100, 0x40000000, 0x2000000, 0x40080000, 0x40080000, 0, 0x40000100, 0x42080100, 0x42080100, 0x2000100, 0x42080000, 0x40000100, 0, 0x42000000, 0x2080100, 0x2000000, 0x42000000, 0x80100, 0x80000, 0x42000100, 0x100, 0x2000000, 0x40000000, 0x2080000, 0x42000100, 0x40080100, 0x2000100, 0x40000000, 0x42080000, 0x2080100, 0x40080100, 0x100, 0x2000000, 0x42080000, 0x42080100, 0x80100, 0x42000000, 0x42080100, 0x2080000, 0, 0x40080000, 0x42000000, 0x80100, 0x2000100, 0x40000100, 0x80000, 0, 0x40080000, 0x2080100, 0x40000100];
+    var spfunction6 = [0x20000010, 0x20400000, 0x4000, 0x20404010, 0x20400000, 0x10, 0x20404010, 0x400000, 0x20004000, 0x404010, 0x400000, 0x20000010, 0x400010, 0x20004000, 0x20000000, 0x4010, 0, 0x400010, 0x20004010, 0x4000, 0x404000, 0x20004010, 0x10, 0x20400010, 0x20400010, 0, 0x404010, 0x20404000, 0x4010, 0x404000, 0x20404000, 0x20000000, 0x20004000, 0x10, 0x20400010, 0x404000, 0x20404010, 0x400000, 0x4010, 0x20000010, 0x400000, 0x20004000, 0x20000000, 0x4010, 0x20000010, 0x20404010, 0x404000, 0x20400000, 0x404010, 0x20404000, 0, 0x20400010, 0x10, 0x4000, 0x20400000, 0x404010, 0x4000, 0x400010, 0x20004010, 0, 0x20404000, 0x20000000, 0x400010, 0x20004010];
+    var spfunction7 = [0x200000, 0x4200002, 0x4000802, 0, 0x800, 0x4000802, 0x200802, 0x4200800, 0x4200802, 0x200000, 0, 0x4000002, 0x2, 0x4000000, 0x4200002, 0x802, 0x4000800, 0x200802, 0x200002, 0x4000800, 0x4000002, 0x4200000, 0x4200800, 0x200002, 0x4200000, 0x800, 0x802, 0x4200802, 0x200800, 0x2, 0x4000000, 0x200800, 0x4000000, 0x200800, 0x200000, 0x4000802, 0x4000802, 0x4200002, 0x4200002, 0x2, 0x200002, 0x4000000, 0x4000800, 0x200000, 0x4200800, 0x802, 0x200802, 0x4200800, 0x802, 0x4000002, 0x4200802, 0x4200000, 0x200800, 0, 0x2, 0x4200802, 0, 0x200802, 0x4200000, 0x800, 0x4000002, 0x4000800, 0x800, 0x200002];
+    var spfunction8 = [0x10001040, 0x1000, 0x40000, 0x10041040, 0x10000000, 0x10001040, 0x40, 0x10000000, 0x40040, 0x10040000, 0x10041040, 0x41000, 0x10041000, 0x41040, 0x1000, 0x40, 0x10040000, 0x10000040, 0x10001000, 0x1040, 0x41000, 0x40040, 0x10040040, 0x10041000, 0x1040, 0, 0, 0x10040040, 0x10000040, 0x10001000, 0x41040, 0x40000, 0x41040, 0x40000, 0x10041000, 0x1000, 0x40, 0x10040040, 0x1000, 0x41040, 0x10001000, 0x40, 0x10000040, 0x10040000, 0x10040040, 0x10000000, 0x40000, 0x10001040, 0, 0x10041040, 0x40040, 0x10000040, 0x10040000, 0x10001000, 0x10001040, 0, 0x10041040, 0x41000, 0x41000, 0x1040, 0x1040, 0x40040, 0x10000000, 0x10041000];
+    var keys = desCreateKeys(key);
+    var m = 0;
+    var i;
+    var j;
+    var temp;
+    var temp2;
+    var right1;
+    var right2;
+    var left;
+    var right;
+    var looping;
+    var cbcleft, cbcleft2, cbcright, cbcright2;
+    var endloop, loopinc;
+    var len = message.length;
+    var chunk = 0;
+    var iterations = keys.length === 32 ? 3 : 9;
+    if (iterations === 3) { looping = encrypt ? [0, 32, 2] : [30, -2, -2]; } else { looping = encrypt ? [0, 32, 2, 62, 30, -2, 64, 96, 2] : [94, 62, -2, 32, 64, 2, 30, -2, -2]; }
+    if (padding === 2) {
+        message += "        ";
+    } else if (padding === 1) {
+        temp = 8 - (len % 8);
+        message += String.fromCharCode(temp, temp, temp, temp, temp, temp, temp, temp);
+        if (temp === 8) {len += 8;}
+    } else if (!padding) {
+        message += "\0\0\0\0\0\0\0\0";
+    }
+    result = "";
+    var tempresult = "";
+
+    if (mode === 1) {
+        cbcleft = (iv.charCodeAt(m++) << 24) | (iv.charCodeAt(m++) << 16) | (iv.charCodeAt(m++) << 8) | iv.charCodeAt(m++);
+        cbcright = (iv.charCodeAt(m++) << 24) | (iv.charCodeAt(m++) << 16) | (iv.charCodeAt(m++) << 8) | iv.charCodeAt(m++);
+        m = 0;
+    }
+    while (m < len) {
+        left = (message.charCodeAt(m++) << 24) | (message.charCodeAt(m++) << 16) | (message.charCodeAt(m++) << 8) | message.charCodeAt(m++);
+        right = (message.charCodeAt(m++) << 24) | (message.charCodeAt(m++) << 16) | (message.charCodeAt(m++) << 8) | message.charCodeAt(m++);
+        if (mode === 1) {
+            if (encrypt) {
+                left ^= cbcleft;
+                right ^= cbcright;
+            } else {
+                cbcleft2 = cbcleft;
+                cbcright2 = cbcright;
+                cbcleft = left;
+                cbcright = right;
+            }
+        }
+        temp = ((left >>> 4) ^ right) & 0x0f0f0f0f;
+        right ^= temp;
+        left ^= (temp << 4);
+        temp = ((left >>> 16) ^ right) & 0x0000ffff;
+        right ^= temp;
+        left ^= (temp << 16);
+        temp = ((right >>> 2) ^ left) & 0x33333333;
+        left ^= temp;
+        right ^= (temp << 2);
+        temp = ((right >>> 8) ^ left) & 0x00ff00ff;
+        left ^= temp;
+        right ^= (temp << 8);
+        temp = ((left >>> 1) ^ right) & 0x55555555;
+        right ^= temp;
+        left ^= (temp << 1);
+        left = ((left << 1) | (left >>> 31));
+        right = ((right << 1) | (right >>> 31));
+        for (j = 0; j < iterations; j += 3) {
+            endloop = looping[j + 1];
+            loopinc = looping[j + 2];
+            for (i = looping[j]; i !== endloop; i += loopinc) {
+                right1 = right ^ keys[i];
+                right2 = ((right >>> 4) | (right << 28)) ^ keys[i + 1];
+                temp = left;
+                left = right;
+                right = temp ^ (spfunction2[(right1 >>> 24) & 0x3f] | spfunction4[(right1 >>> 16) & 0x3f] |
+                    spfunction6[(right1 >>> 8) & 0x3f] | spfunction8[right1 & 0x3f] |
+                    spfunction1[(right2 >>> 24) & 0x3f] | spfunction3[(right2 >>> 16) & 0x3f] |
+                    spfunction5[(right2 >>> 8) & 0x3f] | spfunction7[right2 & 0x3f]);
+            }
+            temp = left;
+            left = right;
+            right = temp;
+        }
+        left = ((left >>> 1) | (left << 31));
+        right = ((right >>> 1) | (right << 31));
+        temp = ((left >>> 1) ^ right) & 0x55555555;
+        right ^= temp;
+        left ^= (temp << 1);
+        temp = ((right >>> 8) ^ left) & 0x00ff00ff;
+        left ^= temp;
+        right ^= (temp << 8);
+        temp = ((right >>> 2) ^ left) & 0x33333333;
+        left ^= temp;
+        right ^= (temp << 2);
+        temp = ((left >>> 16) ^ right) & 0x0000ffff;
+        right ^= temp;
+        left ^= (temp << 16);
+        temp = ((left >>> 4) ^ right) & 0x0f0f0f0f;
+        right ^= temp;
+        left ^= (temp << 4);
+
+        if (mode === 1) {
+            if (encrypt) {
+                cbcleft = left;
+                cbcright = right;
+            } else {
+                left ^= cbcleft2;
+                right ^= cbcright2;
+            }
+        }
+        tempresult += String.fromCharCode((left >>> 24), ((left >>> 16) & 0xff), ((left >>> 8) & 0xff), (left & 0xff), (right >>> 24), ((right >>> 16) & 0xff), ((right >>> 8) & 0xff), (right & 0xff));
+
+        chunk += 8;
+        if (chunk === 512) {
+            result += tempresult;
+            tempresult = "";
+            chunk = 0;
+        }
+    }
+    return result + tempresult;
+}
+
+function decodeDesCBC(ciphertext) {
+    var CBC_MODE = 1;
+    var decrypt = false;
+    var key = "79184391";
+    var iv = "87968842";
+    var encryptedMsg = decodeBase64(ciphertext);
+    var decryptedText = des(key, encryptedMsg, decrypt, CBC_MODE, iv, false);
+    return unpad(decryptedText);
+}
+
+function fckAllFunction($, needObj) {
+    var scripts = $("script");
+    for (var i = 0; i < scripts.length; i++) {
+        try {
+            var q = eval("(function(){" + $(scripts[i]).text() + "return " + needObj + "})()");
+            if (q) {
+                return q;
+            }
+        } catch (e) {
+        }
+    }
+}
+
+function searchParser(url, html) {
+    var c = cheerio.load(html);
+    var list = [];
+    c("div.cp_a").filter(function (index, element) {
+        return !(c(element).parents(".ibox").length > 0);
+    }).each(function (i, e) {
+        var bm = {};
+        var a = c(e).children("a");
+
+        bm.name = c(a[1]).attr("title");
+        bm.url = buildUrl(c(a[1]).attr("href"), url);
+
+        bm.logo = buildLogo(c(a[0]).find("img").attr("src"));
+        var li = c(a[0]).find("li");
+        bm.updateTime = c(li[2]).text().trim();
+        bm.status = c(li[1]).text().trim() + "  " + c(li[0]).text().trim();
+        bm.newSection = "";
+        list.push(bm);
+    });
+    return JSON.stringify(list);
+}
+function removeLeadingSlash(url) {
+    var re = /^\/+/;
+    return url.replace(re, "");
+}
+function removeLeadingSlash2(url) {
+    var re = /^\/[^/]+/;
+    return removeLeadingSlash(url.replace(re, ""));
+}
+function addProtocol(url) {
+    var protocol = "http://";
+    var newUrl;
+    if (url.indexOf("http://") >= 0) {
+        newUrl = url.replace("http://", protocol);
+    } else {
+        newUrl = url;
+    }
+    return protocol + removeLeadingSlash(newUrl);
+}
+function addHost(url) {
+    var host = "www.dnvod.tv/";
+    var newUrl;
+    if (url.indexOf(host) >= 0 || url.indexOf("http:") >= 0) {
+        newUrl = url;
+    } else {
+        newUrl = addProtocol(host + removeLeadingSlash(url));
+    }
+    return newUrl;
+}
+function buildLogo(url) {
+    return addProtocol(url);
+}
+function buildUrl(url, iden) {
+    var newUrl;
+    if (iden) {
+        var u = removeLeadingSlash2(url);
+        var p = iden.split("/");
+        p[p.length - 1] = u;
+        newUrl = p.join("/");
+    } else {
+        newUrl = url;
+    }
+    return addHost(newUrl);
+}
+function bookParser(url, html) {
+    var c = cheerio.load(html);
+    var data = {};
+    var div = c("div.p-r");
+    var e = div.children("ul")[0];
+    data.name = c(e).children("h1").text().trim();
+    data.author = "";
+    data.logo = buildLogo(c("div#spec-n1").children("img").attr("src").trim());
+    data.updateTime = c(c(e).children("li")[6]).text().trim();
+    data.intro = div.children("div.text").text().trim();
+
+    var sec = c(".autoHide").children("li");
+    data.sections = [];
+    sec.each(function (i, e) {
+        var bm = {
+            name: c(e).find("a").text(),
+            url: buildUrl(c(e).find("a").attr("href"), url)
+        };
+        if (c(e).children("div").attr("class").indexOf("v") >= 0) {
+            bm.name += " vip";
+        } else { /* 解锁vip后else去掉 */
+            data.sections.push(bm);
+        }
+    });
+    data.sections.reverse();
+    return JSON.stringify(data);
+}
+function serialize(obj) {
+    return Object.keys(obj).reduce(function (a, k) {
+        a.push(k + "=" + encodeURIComponent(obj[k]));
+        return a;
+    }, []).join("&");
+}
+function isSectionPage(url) {
+    return url.indexOf("Readyplay") > 0;
+}
+function isReturnJsonUrl(url) {
+    return (url.indexOf("GetResource.ashx") > 0) && (url.indexOf("device") > 0);
+}
+
+function isEncryptedVideoUrl(url) {
+    return result.key && (url.indexOf(result.key) > 0);
+}
+
+var formData = "{}";
+var json = {};
+var videoFiles = [];
+var defaultRefer = "http://www.dnvod.tv";
+var referer = "";
+var jsonObj = {};
+var result = {};
+var sectionPage = "";
+
+function buildRefer(url) {
+    return referer || defaultRefer;
+}
+function getVip(html) {
+    var c = cheerio.load(html);
+    var script = c("body>script[type='text/javascript']").filter(function (i, x) {
+        return x.children[0];
+    });
+    var vip = script[1].children[0].data;
+    vip = vip.replace(/window[.]/g, "").replace(/var\s+(\w+[.])/g, "$1").split("$(function()");
+    var VideoInfo = null;
+    var bought = vip[0] + "}";
+    var fakebought = ("function a(b){b()}{a(function ()" + vip[1]).replace(/[$]/g, "c").replace(/c[.]each\(([\w\.]+)\,\w+\s*\(\w+\,/, "$1\.forEach\(function\(");
+    console.log(bought, fakebought);
+    try {
+        eval(bought);
+        c(".bfan-v>a,.bfan-u>a").each(function (i, e) {
+            VideoInfo.videoBought.push(c(e).attr("data-id"));
+        });
+        var defaultClose = false;
+        eval(fakebought);
+    } catch (e) {
+        console.log(e);
+        console.log(bought);
+        console.log(fakebought);
+    }
+
+    var videolist = [];
+    c(".bfan-v>a,.bfan-u>a").each(function (i, e) {
+        videolist.push(addHost(c(e).attr("href")));
+    });
+    var result = JSON.stringify(videolist);
+    console.log(result);
+    return result;
+}
+
+function parseSectionUrl(url, html) {
+    if (isSectionPage(url)) {
+        print("1");
+        sectionPage = url;
+        var c = cheerio.load(html);
+        var pc = fckAllFunction(c, "pc");
+        var key = fckAllFunction(c, "gk()");
+        jsonObj = pc;
+        jsonObj.key = key;
+        var jsonUrl = addHost(jsonObj.prefix + jsonObj.mobilePlayer.method + jsonObj.id + jsonObj.mobilePlayer.parameters);
+        formData = {key: jsonObj.key};
+        formData = serialize(formData) + "&player=true&noforeback=false";
+        referer = url;
+        return "CALL::POST::" + jsonUrl.replace("https", "http");
+    } else if (isReturnJsonUrl(url)) {
+        result = JSON.parse(html);
+        referer = sectionPage;
+        var encryptUrl = addHost(jsonObj.prefix + result.generator + "&key=" + result.key);
+        return "CALL::GET::" + encryptUrl.replace("https", "http");
+    } else if (isEncryptedVideoUrl(url)) {
+        var videoUrl = decodeDesCBC(html);
+        var resourceType = videoUrl.match(/\/(\w+):[^/]*$/)[1];
+        videoFiles = [];
+        videoFiles.push({
+            url: videoUrl,
+            type: "." + resourceType,
+            mime: "video/" + resourceType,
+            log: "",
+            rtmpOption: {
+                rtmp_swfurl: "http://www.dnvod.tv/_player/954684278/ckplayer.swf/[[DYNAM.IC]]/1",
+                rtmp_pageurl: sectionPage,
+                rtmp_flashver: "WIN 26,0,0,131"
+            }
+        });
+        return "http://www.dnvod.tv/";
+    } else {
+        return "";
+    }
+}
+
+function parseCookie(cookies) {
+    var re = /([\w_.]+)=([^;\s]+)/;
+    var separator = /[;\n]/;
+    var result = {};
+    cookies.split(separator).forEach(function (pair) {
+        var c = re.exec(pair);
+        if (c) {
+            result[c[1]] = c[2];
+        }
+    });
+    /* filter cookies */
+    var filter = ["path", "domain", "expires"];
+    for (var property in result) {
+        if (result.hasOwnProperty(property)) {
+            if (filter.indexOf(property.toLowerCase().trim()) >= 0) {
+                delete result[property];
+            }
+        }
+    }
+    return result;
+}
+
+function cookieToString(cookies) {
+    var result = [];
+    var newCookie;
+    if (typeof cookies === "object") {
+        for (var property in cookies) {
+            if (cookies.hasOwnProperty(property)) {
+                result.push(property + "=" + cookies[property]);
+            }
+        }
+    }
+    newCookie = result.join(";");
+    return newCookie;
+}
+
+function buildCookies(url, cookies) {
+    var newCookies;
+    if (isReturnJsonUrl(url) || isEncryptedVideoUrl(url)) {
+        var newCookiesObj = parseCookie(cookies.replace(/(httponly|null)\s*/gi, ""));
+        newCookiesObj._uid = jsonObj.key;
+        newCookiesObj.dn_config = "device=desktop&player=CkPlayer&tech=HLS";
+        newCookies = cookieToString(newCookiesObj);
+    }
+    return newCookies || "";
+}
+
+function buildSectionArgs(url) {
+    if (isReturnJsonUrl(url)) {
+        return formData.split("&").join(";");
+    } else {
+        return "";
+    }
+}
+function SectionParser(url, html) {
+    return JSON.stringify(videoFiles);
+}
+function buildHeader(url) {
+    var header;
+    if (isReturnJsonUrl(url)) {
+        header = "Content-Type: application/x-www-form-urlencoded;charset=UTF-8 $$ X-Requested-With: XMLHttpRequest $$ Accept: */*";
+    } else if (isEncryptedVideoUrl(url)) {
+        header = "X-Requested-With: ShockwaveFlash/26.0.0.131 $$ Accept: */*";
+    } else {
+        header = "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8";
+    }
+    return header;
+}
+
+function buildRTMPParameter(url) {
+    print("call build");
+    return "rtmp_swfurl:http://www.dnvod.tv/_player/954684278/ckplayer.swf/[[DYNAM.IC]]/1$$rtmp_pageurl:" + sectionPage + "$$rtmp_flashver:WIN 26,0,0,131";
+}
+
+/*var print = console.log;
+ print(decodeDesCBC("6Yg4mbXEMdhC2fSbHDTPf60fBiPM/d/P2gXJnGkJ36OHUNrBqzf4AqiuuVveDLnX"));*/
+
+
+]]>
+        </code>
+    </script>
+</site>
